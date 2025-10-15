@@ -16,3 +16,16 @@
 # attachments/*
 # private/*
 .smart-env/
+.obsidian/**
+!.obsidian/community-plugins.json
+!.obsidian/snippets/
+!.obsidian/snippets/*.css
+.obsidian/plugins/
+.obsidian/cache/
+.obsidian/updates.json
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/graph.json
+.obsidian/obsidian-sync*

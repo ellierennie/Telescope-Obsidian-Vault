@@ -12,3 +12,8 @@
 .obsidian/plugins/
 .obsidian/text-generator.json
 Inputs/Zotero/Attachments/
+Inputs/**
+.smart-env/
+.smart-env/
+.obsidian/plugins/
+.obsidian/text-generator.json

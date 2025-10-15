@@ -1,25 +1,5 @@
-# macOS system files
 .DS_Store
-
-# Obsidian cache and personal layout
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/graph.json
-.obsidian/appearance.json
-.obsidian/app.json
-.obsidian/cache/
-.obsidian/updates.json
-# Keep only plugin list, exclude installed plugin folders
-.obsidian/plugins/
-!.obsidian/community-plugins.json
-# Optional: exclude sensitive or private areas
-# attachments/*
-# private/*
 .smart-env/
-.obsidian/**
-!.obsidian/community-plugins.json
-!.obsidian/snippets/
-!.obsidian/snippets/*.css
 .obsidian/plugins/
 .obsidian/cache/
 .obsidian/updates.json

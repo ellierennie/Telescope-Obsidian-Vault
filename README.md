@@ -55,8 +55,8 @@ This repo is a **template** — no private data, caches, or embeddings.
 ## Notes
 - This repo excludes `.smart-env/` (Smart Connections embeddings) by design.
 - If you add sensitive data, keep your repo private and ensure your `.gitignore` remains up to date.
-**Optional plugin**
-- Readwise Official — sync highlights into your vault (install + add your own Readwise token locally).
+
+- **Optional plugin:** Readwise Official — sync highlights into your vault (install + add your own Readwise token locally).
 ## Configure in Obsidian: Readwise & Zotero
 
 This repo tracks only **neutral** config and **content**. Live plugin settings (and any API tokens) are **not** tracked by Git:

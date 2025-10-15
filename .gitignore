@@ -18,3 +18,4 @@
 # attachments/*
 # private/*
 .smart-env/
+.smart-env/

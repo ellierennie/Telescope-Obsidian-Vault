@@ -9,3 +9,5 @@
 .obsidian/appearance.json
 .obsidian/graph.json
 .obsidian/obsidian-sync*
+.obsidian/plugins/
+.obsidian/text-generator.json

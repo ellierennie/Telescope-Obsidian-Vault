@@ -92,3 +92,13 @@ This repo tracks only **neutral** config and **content**. Live plugin settings (
 - To scan current files for secrets (optional):
   - Search for `api`, `token`, `secret`, `openai` in your editor, or run a grep.
 
+
+### Zotero PDF Utility (required for highlights)
+To extract and embed PDF highlights, install the **PDF Utility** from the Zotero Desktop Connector plugin:
+
+1. Obsidian → **Settings → Community plugins → Zotero Desktop Connector → Settings**  
+2. Click **Download PDF Utility** (or **Update PDF Utility** if prompted).
+3. Restart Obsidian or reload the plugin.
+4. Ensure your **Literature notes folder** is set to `Inputs/Zotero/Notes`.
+
+Without the PDF Utility, highlight extraction will not work.

@@ -1,0 +1,9 @@
+mark.comment {
+  background-color: #5fb236;
+}
+
+mark.selection {
+  display: block;
+  white-space: pre-wrap;
+  background-color: transparent;
+}

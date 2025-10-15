@@ -17,3 +17,9 @@ Inputs/**
 .smart-env/
 .obsidian/plugins/
 .obsidian/text-generator.json
+.obsidian/core-plugins.json
+.obsidian/core-plugins.json
+.obsidian/core-plugins.json
+
+.obsidian/community-plugins.json
+.obsidian/plugins/

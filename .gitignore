@@ -1,27 +1,16 @@
 .DS_Store
 .smart-env/
-.obsidian/plugins/
-.obsidian/cache/
-.obsidian/updates.json
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/app.json
-.obsidian/appearance.json
-.obsidian/graph.json
-.obsidian/obsidian-sync*
-.obsidian/plugins/
-.obsidian/text-generator.json
-Inputs/Zotero/Attachments/
-Inputs/**
-.smart-env/
-.smart-env/
-.obsidian/plugins/
-.obsidian/text-generator.json
-.obsidian/core-plugins.json
-.obsidian/core-plugins.json
-.obsidian/core-plugins.json
-
-.obsidian/community-plugins.json
-.obsidian/plugins/
-Inputs/**
+# Local notes & imports (never sync)
 Notes/**
+Inputs/**
+
+# If you want to keep Zotero attachments local even if Inputs rules change later
+Inputs/Zotero/Attachments/
+
+# Obsidian: ignore everything in .obsidian by default
+.obsidian/**
+
+# Allow-list safe, shareable config
+!.obsidian/community-plugins.json
+!.obsidian/snippets/
+!.obsidian/snippets/*.css

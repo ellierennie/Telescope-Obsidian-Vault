@@ -13,13 +13,13 @@
   "metaedit",
   "metadata-menu",
   "obsidian-meta-bind-plugin",
- "obsidian-git",
+  "obsidian-git",
   "obsidian-list-callouts",
   "js-engine",
   "oz-image-plugin",
   "image-captions",
   "homepage",
-"KOI Sync",
+  "koi-sync",
   "obsidian-footnotes",
   "obsidian-emoji-toolbar",
   "table-editor-obsidian",
@@ -27,5 +27,6 @@
   "obsidian-annotator",
   "obsidian-view-mode-by-frontmatter",
   "obsidian-tasks-plugin",
-  "obsidian-leaflet-plugin"
+  "obsidian-leaflet-plugin",
+  "buttons"
 ]

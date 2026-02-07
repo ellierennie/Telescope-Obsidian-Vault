@@ -1,0 +1,72 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Readwise Template",
+      "path": "_system/Templates/_Plugin Templates/Readwise Template.md"
+    },
+    {
+      "basename": "Zotero Template",
+      "path": "_system/Templates/_Plugin Templates/Zotero Template.md"
+    },
+    {
+      "basename": "REF_baradQuantumEntanglementsHauntological2010",
+      "path": "REF_baradQuantumEntanglementsHauntological2010.md"
+    },
+    {
+      "basename": "baradQuantumEntanglementsHauntological2010",
+      "path": "Inputs/Zotero/baradQuantumEntanglementsHauntological2010.md"
+    },
+    {
+      "basename": "andrejevicValueDigitalTwins2025",
+      "path": "Inputs/Zotero/andrejevicValueDigitalTwins2025.md"
+    },
+    {
+      "basename": "Home",
+      "path": "Navigation/Home.md"
+    },
+    {
+      "basename": "1. Reference Note",
+      "path": "_system/Templates/+ Referencing/1. Reference Note.md"
+    },
+    {
+      "basename": "1. My Notes",
+      "path": "Navigation/Notes/1. My Notes.md"
+    },
+    {
+      "basename": "Documentation",
+      "path": "Navigation/Notes/Documentation.md"
+    },
+    {
+      "basename": "Source Inputs",
+      "path": "Navigation/Inputs/Source Inputs.md"
+    },
+    {
+      "basename": "4. Archive",
+      "path": "Navigation/Notes/4. Archive.md"
+    },
+    {
+      "basename": "3. Daily Notes",
+      "path": "Navigation/Notes/3. Daily Notes.md"
+    },
+    {
+      "basename": "2. Reminders",
+      "path": "Navigation/Notes/2. Reminders.md"
+    },
+    {
+      "basename": "⌘ ⇧ P - Referencing",
+      "path": "Navigation/Documentation/⌘ ⇧ P - Referencing.md"
+    },
+    {
+      "basename": "⌘ P - Open Command Palette",
+      "path": "Navigation/Documentation/⌘ P - Open Command Palette.md"
+    },
+    {
+      "basename": "All Hotkeys",
+      "path": "Navigation/Documentation/All Hotkeys.md"
+    }
+  ],
+  "omittedPaths": [],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false
+}

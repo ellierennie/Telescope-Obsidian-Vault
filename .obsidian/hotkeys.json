@@ -2529,5 +2529,13 @@
       ],
       "key": "N"
     }
+  ],
+  "templater-obsidian:create-_system/Templates/+ Referencing/1. Reference Note.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
   ]
 }

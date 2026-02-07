@@ -12,6 +12,11 @@ tags:
 note: 
 noteAuthor: <% await tp.user.vaultAuthor(tp) %>
 ---
+```button 
+name Create Reference Note 
+type template action _system/Templates/+ Referencing/1. Reference Note.md 
+templater true 
+```
 
 # {{title}}
 ## By {% for creator in creators %}{{creator.lastName}}_{{creator.firstName}}, {% endfor %}

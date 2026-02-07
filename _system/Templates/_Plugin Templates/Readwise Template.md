@@ -10,6 +10,13 @@ flag: false
 ---
 Readwise template to cut and paste into the template settings
 
+## Actions
+```
+button 
+name Create Reference Note type template 
+action _system/Templates/+ Referencing/1. Reference Note.md 
+templater true 
+```
 # Folder Path 
 
 ```

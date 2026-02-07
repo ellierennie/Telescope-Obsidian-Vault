@@ -1,0 +1,74 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "_system/Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": true,
+  "shell_path": "",
+  "user_scripts_folder": "_system/Templates/JS_Scripts/JS-TEMP",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "People",
+      "template": "_system/Templates/_Primary/+Person.md"
+    },
+    {
+      "folder": "Inputs/KOI/Telescope/Channels",
+      "template": "_system/Templates/_Telescope Templates/+TelescopeChannel.md"
+    },
+    {
+      "folder": "Inputs/KOI/Telescope/Authors",
+      "template": "_system/Templates/_Telescope Templates/+TelescopeAuthor.md"
+    },
+    {
+      "folder": "Inputs/KOI/Telescope/Workspaces",
+      "template": "_system/Templates/_Telescope Templates/+TelescopeWorkspace.md"
+    },
+    {
+      "folder": "_navigation/_classes",
+      "template": "_system/Templates/_Secondary/+class.md"
+    },
+    {
+      "folder": "",
+      "template": ""
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "_system/Templates/+New Notes/+New_Notes.md",
+    "_system/Templates/+ Production/+Production.md",
+    "_system/Templates/+ Open Notes/+ Open Notes.md",
+    "_system/Templates/_Drivers/Cite Notes.md",
+    "_system/Templates/_Drivers/Cite People.md",
+    "_system/Templates/_Drivers/Cite Reference Notes.md",
+    "_system/Templates/+Metadata Adjustments/+Metadata Adjustments.md",
+    "_system/Templates/+moveNotes/+moveNotes.md",
+    "_system/Templates/Misc Commands/BUTTON_Assign.md",
+    "_system/Templates/Misc Commands/BUTTON_Priority.md",
+    "_system/Templates/_Drivers/Cite Telescopes.md",
+    "_system/Templates/_Reference Notes/Telescope Notes.md",
+    "_system/Templates/+ Referencing/+ Referencing.md",
+    "_system/Templates/+Connector/+Connector.md",
+    "_system/Templates/+KOI_Stream/+KOI_Stream.md",
+    "_system/Templates/+New Notes/Create a Connected Note.md",
+    "_system/Templates/+ Referencing/1. Reference Note.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1
+}

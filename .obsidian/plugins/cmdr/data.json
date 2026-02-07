@@ -4,14 +4,7 @@
   "debug": false,
   "editorMenu": [],
   "fileMenu": [],
-  "leftRibbon": [
-    {
-      "id": "templater-obsidian:insert-templater",
-      "icon": "lucide-pen-tool",
-      "name": "Templater: Open insert template modal",
-      "mode": "any"
-    }
-  ],
+  "leftRibbon": [],
   "rightRibbon": [],
   "titleBar": [],
   "statusBar": [],

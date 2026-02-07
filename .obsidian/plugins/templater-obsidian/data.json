@@ -9,7 +9,7 @@
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": true,
-  "enable_system_commands": true,
+  "enable_system_commands": false,
   "shell_path": "",
   "user_scripts_folder": "_system/Templates/JS_Scripts/JS-TEMP",
   "enable_folder_templates": true,
@@ -33,10 +33,6 @@
     {
       "folder": "_navigation/_classes",
       "template": "_system/Templates/_Secondary/+class.md"
-    },
-    {
-      "folder": "",
-      "template": ""
     }
   ],
   "enable_file_templates": false,
@@ -64,11 +60,11 @@
     "_system/Templates/+ Referencing/+ Referencing.md",
     "_system/Templates/+Connector/+Connector.md",
     "_system/Templates/+KOI_Stream/+KOI_Stream.md",
-    "_system/Templates/+New Notes/Create a Connected Note.md",
-    "_system/Templates/+ Referencing/1. Reference Note.md"
+    "_system/Templates/+New Notes/Create a Connected Note.md"
   ],
   "startup_templates": [
     ""
   ],
-  "intellisense_render": 1
+  "intellisense_render": 1,
+  "enable_ribbon_icon": false
 }

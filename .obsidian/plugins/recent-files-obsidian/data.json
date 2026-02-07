@@ -1,44 +1,112 @@
 {
   "recentFiles": [
     {
-      "basename": "Readwise Template",
-      "path": "_system/Templates/_Plugin Templates/Readwise Template.md"
+      "basename": "value",
+      "path": "Notes/value.md"
     },
     {
-      "basename": "Zotero Template",
-      "path": "_system/Templates/_Plugin Templates/Zotero Template.md"
-    },
-    {
-      "basename": "REF_baradQuantumEntanglementsHauntological2010",
-      "path": "REF_baradQuantumEntanglementsHauntological2010.md"
-    },
-    {
-      "basename": "baradQuantumEntanglementsHauntological2010",
-      "path": "Inputs/Zotero/baradQuantumEntanglementsHauntological2010.md"
+      "basename": "REF_andrejevicValueDigitalTwins2025",
+      "path": "Synthesis/Reference Notes/Sources/REF_andrejevicValueDigitalTwins2025.md"
     },
     {
       "basename": "andrejevicValueDigitalTwins2025",
       "path": "Inputs/Zotero/andrejevicValueDigitalTwins2025.md"
     },
     {
+      "basename": "2602080702_Andrejevic,_Mark_Examining_digital_twins_at_scales_from_t",
+      "path": "Synthesis/Quotes/ Sources/2602080702_Andrejevic,_Mark_Examining_digital_twins_at_scales_from_t.md"
+    },
+    {
+      "basename": "Quotes - All",
+      "path": "Navigation/Inputs/Quotes - All.md"
+    },
+    {
+      "basename": "People",
+      "path": "Navigation/Inputs/People.md"
+    },
+    {
+      "basename": "Source Inputs",
+      "path": "Navigation/Inputs/Source Inputs.md"
+    },
+    {
+      "basename": "⌘ ⇧ R - Referencing",
+      "path": "Navigation/Documentation/⌘ ⇧ R - Referencing.md"
+    },
+    {
+      "basename": "⌥ ⌘ ⇧ R - Replace Templates in active file",
+      "path": "Navigation/Documentation/⌥ ⌘ ⇧ R - Replace Templates in active file.md"
+    },
+    {
       "basename": "Home",
       "path": "Navigation/Home.md"
     },
     {
-      "basename": "1. Reference Note",
-      "path": "_system/Templates/+ Referencing/1. Reference Note.md"
+      "basename": "Zotero Template",
+      "path": "_system/Templates/_Plugin Templates/Zotero Template.md"
     },
     {
-      "basename": "1. My Notes",
-      "path": "Navigation/Notes/1. My Notes.md"
+      "basename": "⌥ ⌘ ⇧ K - KOI Stream",
+      "path": "Navigation/Documentation/⌥ ⌘ ⇧ K - KOI Stream.md"
+    },
+    {
+      "basename": "⌃ ⌘ Z - Zotero Import",
+      "path": "Navigation/Documentation/⌃ ⌘ Z - Zotero Import.md"
+    },
+    {
+      "basename": "⌘ ⇧ O - Open Notes",
+      "path": "Navigation/Documentation/⌘ ⇧ O - Open Notes.md"
+    },
+    {
+      "basename": "⌘ ⇧ P - Production",
+      "path": "Navigation/Documentation/⌘ ⇧ P - Production.md"
+    },
+    {
+      "basename": "All Hotkeys",
+      "path": "Navigation/Documentation/All Hotkeys.md"
     },
     {
       "basename": "Documentation",
       "path": "Navigation/Notes/Documentation.md"
     },
     {
-      "basename": "Source Inputs",
-      "path": "Navigation/Inputs/Source Inputs.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "1. Reference Note",
+      "path": "_system/Templates/+ Referencing/1. Reference Note.md"
+    },
+    {
+      "basename": "⌘ P - Open Command Palette",
+      "path": "Navigation/Documentation/⌘ P - Open Command Palette.md"
+    },
+    {
+      "basename": "⌥ ⌘ Q - Close all Tabs",
+      "path": "Navigation/Documentation/⌥ ⌘ Q - Close all Tabs.md"
+    },
+    {
+      "basename": "⌥ 1 2 3 - Citing your Notes",
+      "path": "Navigation/Documentation/⌥ 1 2 3 - Citing your Notes.md"
+    },
+    {
+      "basename": "Buttons",
+      "path": "Navigation/Documentation/Buttons.md"
+    },
+    {
+      "basename": "Readwise Template",
+      "path": "_system/Templates/_Plugin Templates/Readwise Template.md"
+    },
+    {
+      "basename": "Reference Note shortcut",
+      "path": "_system/Templates/Reference Note shortcut.md"
+    },
+    {
+      "basename": "createReferenceNote.js",
+      "path": "_system/Templates/JS_Scripts/JS-TEMP/createReferenceNote.js.md"
+    },
+    {
+      "basename": "1. My Notes",
+      "path": "Navigation/Notes/1. My Notes.md"
     },
     {
       "basename": "4. Archive",
@@ -51,18 +119,6 @@
     {
       "basename": "2. Reminders",
       "path": "Navigation/Notes/2. Reminders.md"
-    },
-    {
-      "basename": "⌘ ⇧ P - Referencing",
-      "path": "Navigation/Documentation/⌘ ⇧ P - Referencing.md"
-    },
-    {
-      "basename": "⌘ P - Open Command Palette",
-      "path": "Navigation/Documentation/⌘ P - Open Command Palette.md"
-    },
-    {
-      "basename": "All Hotkeys",
-      "path": "Navigation/Documentation/All Hotkeys.md"
     }
   ],
   "omittedPaths": [],

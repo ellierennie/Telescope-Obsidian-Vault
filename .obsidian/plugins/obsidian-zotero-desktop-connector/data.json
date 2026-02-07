@@ -1,19 +1,19 @@
 {
   "database": "Zotero",
-  "noteImportFolder": "Inputs/Zotero",
+  "noteImportFolder": "Zotero",
   "pdfExportImageDPI": 120,
   "pdfExportImageFormat": "jpg",
   "pdfExportImageQuality": 90,
   "citeFormats": [
     {
-      "name": "Format #1",
+      "name": "Cite",
       "format": "formatted-citation",
       "cslStyle": "apa"
     }
   ],
   "exportFormats": [
     {
-      "name": "Import with Highlights",
+      "name": "Zotero Import",
       "outputPathTemplate": "Inputs/Zotero/{{citekey}}.md",
       "imageOutputPathTemplate": "Inputs/Zotero/{{citekey}}/Images",
       "imageBaseNameTemplate": "image",
@@ -23,5 +23,5 @@
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": true,
-  "whichNotesToOpenAfterImport": "all-imported-notes"
+  "whichNotesToOpenAfterImport": "first-imported-note"
 }

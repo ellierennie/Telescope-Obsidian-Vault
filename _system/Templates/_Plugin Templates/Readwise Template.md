@@ -8,6 +8,13 @@ related:
 note: Readwise template to cut and paste into the template settings
 flag: false
 ---
+```button
+name Create Reference note
+type cursor template
+action Reference Note shortcut
+```
+^button-myfq
+
 Readwise template to cut and paste into the template settings
 
 ## Actions

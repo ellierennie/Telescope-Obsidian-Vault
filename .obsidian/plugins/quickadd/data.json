@@ -1,31 +1,238 @@
 {
   "choices": [
     {
-      "id": "97cc1383-7b81-43a7-b0c7-c9e73e0bbb1a",
+      "id": "22efe195-05c8-427f-959f-d45b62722b64",
+      "name": "Log",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "ed45e838-e95c-499f-9ed9-3c5debcc3201",
+          "name": "**Active Note**",
+          "type": "Capture",
+          "command": false,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "- [ ] {{VALUE: Comment}} \n{{selected}}"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": true,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": true,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "split",
+            "direction": "horizontal",
+            "focus": true,
+            "mode": "default"
+          }
+        },
+        {
+          "id": "1b1c5616-19fe-48fe-bb8c-09750844de6b",
+          "name": "**Comments Log**",
+          "type": "Capture",
+          "command": false,
+          "appendLink": false,
+          "captureTo": "Navigation/Notes/Comment Log.md",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "### Commenting on {{linkcurrent}} ({{DATE:YY.MM.DD}})\n{{VALUE: Comment}}\n> {{selected}}\n\\n \n\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": true,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "split",
+            "direction": "horizontal",
+            "focus": true,
+            "mode": "default"
+          }
+        },
+        {
+          "id": "e78bdc0c-89d9-40a0-82a8-4ec162c12c0f",
+          "name": "**Daily Note** (no citation linkage)",
+          "type": "Capture",
+          "command": false,
+          "appendLink": false,
+          "captureTo": "Notes/Daily Notes/{{date:YY.MM.DD}}",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "- [ ]  {{VALUE: Comment}}\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": true,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "split",
+            "direction": "horizontal",
+            "focus": true,
+            "mode": "default"
+          }
+        },
+        {
+          "id": "ff8fa6d9-912e-426a-b1fa-dab8aee83b09",
+          "name": "**Daily Note** (cite active file)",
+          "type": "Capture",
+          "command": false,
+          "appendLink": false,
+          "captureTo": "Notes/Daily Notes/{{date:YY.MM.DD}}",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "- [ ]  ({{linkcurrent}}) {{VALUE: Comment}}\n{{selected}}\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": true,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "split",
+            "direction": "horizontal",
+            "focus": true,
+            "mode": "default"
+          },
+          "activeFileWritePosition": "cursor"
+        },
+        {
+          "id": "2aec8c57-1cd9-467c-b9e3-3f413383fa7b",
+          "name": "**Obsidian Log** ",
+          "type": "Capture",
+          "command": false,
+          "appendLink": false,
+          "captureTo": "_system/Obsidian Log.md",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "{{DATE: YY.MM.DD}}\n- [ ] {{VALUE: Comment}} (created in {{linkcurrent}})\n{{selected}}\\n \n\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": true,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": true,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "horizontal",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileOpening": {
+            "location": "split",
+            "direction": "horizontal",
+            "focus": true,
+            "mode": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "80f1123d-4f5f-4bc0-aaab-f66ad1debfba",
       "name": "Create Reference Note",
       "type": "Template",
-      "command": true,
-      "templatePath": "_system/Templates/+ Referencing/1. Reference Note.md",
+      "command": false,
+      "templatePath": "",
       "fileNameFormat": {
-        "enabled": true,
-        "format": "REF_{{VALUE:Title}}"
+        "enabled": false,
+        "format": ""
       },
       "folder": {
-        "enabled": true,
-        "folders": [
-          "Synthesis/Reference Notes/Sources"
-        ],
+        "enabled": false,
+        "folders": [],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false,
         "chooseFromSubfolders": false
       },
-      "appendLink": {
-        "enabled": true,
-        "placement": "replaceSelection",
-        "requireActiveFile": false,
-        "linkType": "embed"
-      },
-      "openFile": true,
+      "appendLink": false,
+      "openFile": false,
       "fileOpening": {
         "location": "tab",
         "direction": "vertical",
@@ -41,13 +248,11 @@
   "useSelectionAsCaptureValue": true,
   "devMode": false,
   "templateFolderPath": "_system/Templates",
-  "announceUpdates": "major",
+  "announceUpdates": "all",
   "version": "2.10.0",
-  "globalVariables": {
-    "NewVar": ""
-  },
+  "globalVariables": {},
   "onePageInputEnabled": false,
-  "disableOnlineFeatures": true,
+  "disableOnlineFeatures": false,
   "enableRibbonIcon": false,
   "showCaptureNotification": true,
   "showInputCancellationNotification": false,
@@ -74,6 +279,10 @@
         "endpoint": "https://api.openai.com/v1",
         "apiKey": "",
         "models": [
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          },
           {
             "name": "gpt-3.5-turbo",
             "maxTokens": 4096
@@ -105,35 +314,9 @@
           {
             "name": "gpt-4o",
             "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4o-mini",
-            "maxTokens": 128000
           }
         ],
-        "autoSyncModels": false,
-        "modelSource": "modelsDev"
-      },
-      {
-        "name": "Gemini",
-        "endpoint": "https://generativelanguage.googleapis.com",
-        "apiKey": "",
-        "models": [
-          {
-            "name": "gemini-1.5-pro",
-            "maxTokens": 1000000
-          },
-          {
-            "name": "gemini-1.5-flash",
-            "maxTokens": 1000000
-          },
-          {
-            "name": "gemini-1.5-flash-8b",
-            "maxTokens": 1000000
-          }
-        ],
-        "autoSyncModels": false,
-        "modelSource": "modelsDev"
+        "modelSource": "auto"
       }
     ]
   },
@@ -146,8 +329,8 @@
     "addDefaultAIProviders": true,
     "removeMacroIndirection": true,
     "migrateFileOpeningSettings": true,
-    "backfillFileOpeningDefaults": true,
     "setProviderModelDiscoveryMode": true,
+    "backfillFileOpeningDefaults": true,
     "migrateProviderApiKeysToSecretStorage": true
   }
 }

@@ -905,3 +905,28 @@ a.sc-result-file-title > .sc-breadcrumb:not(.sc-path, .sc-title, .sc-score) {
 a.sc-result-file-title > .sc-breadcrumb-separator {
     color: color-mix(in srgb, var(--text-normal) 50%, transparent) !important;
 }
+
+/* Early-release styles */
+.search-result-container {
+  /* Smooth fold/unfold transition */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  max-height: 9999px;
+  opacity: 1;
+}
+
+.search-result-container.sc-folded {
+  max-height: 0;
+  opacity: 0;
+}
+
+.sc-block-badge{
+  background:var(--interactive-accent);
+  color:var(--text-on-accent);
+  border-radius:3px;
+  padding:0 .3em;
+  user-select:none;
+}
+.sc-inline-pop-item:hover{
+  background:var(--background-modifier-hover);
+}

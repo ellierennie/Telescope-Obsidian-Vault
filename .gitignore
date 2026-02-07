@@ -22,3 +22,9 @@ Inputs/Zotero/Attachments/
 # Add any other plugins with API keys here in the future
 
 # Keep everything else in .obsidian/
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env

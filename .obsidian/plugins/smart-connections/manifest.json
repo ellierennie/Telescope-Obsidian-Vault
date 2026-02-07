@@ -1,10 +1,10 @@
 {
   "id": "smart-connections",
-  "name": "Smart Connections",
-  "author": "Brian Petro",
-  "description": "Chat with your notes & see links to related content with Local or Remote models.",
+  "name": "Smart Connections Pro",
+  "version": "4.2.7",
   "minAppVersion": "1.1.0",
+  "description": "More opportunities for connections. Graph view for visualizing. Inline and footer views (great for mobile!). Configurable algorithms and additional embedding model providers.",
+  "author": "🌴 Brian",
   "authorUrl": "https://smartconnections.app",
-  "isDesktopOnly": false,
-  "version": "4.1.8"
+  "isDesktopOnly": false
 }

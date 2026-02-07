@@ -19,7 +19,6 @@
   "oz-image-plugin",
   "image-captions",
   "homepage",
-  "koi-sync",
   "obsidian-footnotes",
   "obsidian-emoji-toolbar",
   "table-editor-obsidian",
@@ -28,5 +27,7 @@
   "obsidian-view-mode-by-frontmatter",
   "obsidian-tasks-plugin",
   "obsidian-leaflet-plugin",
-  "buttons"
+  "buttons",
+  "koi-sync",
+  "smart-connections"
 ]

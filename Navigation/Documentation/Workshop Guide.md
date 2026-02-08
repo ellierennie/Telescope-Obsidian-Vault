@@ -229,7 +229,7 @@ This creates a connection that appears in "Related Notes"
 **Method 1: Using the Referencing Hotkey**
 
 1. Select text from any note
-2. Press **Cmd+Shift+P** (Referencing menu)
+2. Press **Cmd+Shift+R** (Referencing menu)
 3. Choose "Capture Quote"
 4. A quote note is created and linked
 
@@ -394,7 +394,7 @@ From [[REF_andrejevicDigitalTwins]]:
 |--------|--------|
 | **Cmd+P** | Command Palette (find anything) |
 | **Cmd+Shift+N** | New Notes menu |
-| **Cmd+Shift+P** | Referencing menu (quotes, references) |
+| **Cmd+Shift+R** | Referencing menu (quotes, references) |
 | **Cmd+Shift+O** | Open Notes menu |
 | **Ctrl+Cmd+L** | Log Tool |
 | **Ctrl+Cmd+Z** | Import from Zotero |
@@ -549,7 +549,7 @@ Learn more: https://blacksmithgu.github.io/obsidian-dataview/
 
 **To backup:**
 1. The vault is just a folder of markdown files
-2. Use any backup service (Dropbox, OneDrive, Time Machine)
+2. Use any backup service (Dropbox, OneDrive, Time Machine) but ensure they do not interfere with Obsidian Sync 
 3. Or commit to Git regularly
 
 **To collaborate:**
@@ -626,7 +626,7 @@ Learn more: https://blacksmithgu.github.io/obsidian-dataview/
 - **Cmd+P:** Find any command
 - **Cmd+O:** Find any note
 - **Cmd+Shift+N:** Create new note
-- **Cmd+Shift+P:** Referencing tools
+- **Cmd+Shift+R:** Referencing tools
 - **Ctrl+Cmd+L:** Quick log/reminder
 
 ### Key Concept
@@ -641,11 +641,10 @@ Your notes in Reference Notes are permanent. Source files can sync/update withou
 
 This workshop covers the core Telescope features. The following are available but not covered:
 
-- **KOI-Sync:** Team collaboration features (in development)
-- **Telescope:** Organizational intelligence tools (requires setup)
+- **KOI-Sync:** Knowledge network protocol (in development)
+- **Telescope:** Ethical bot for qualitative data from online forums (requires setup)
 - **Advanced Templater:** Custom JavaScript functions
-- **Canvas:** Visual workspace (Obsidian core feature)
-- **Dataview JavaScript:** Custom queries
+
 
 Ask if you're interested in any of these!
 
@@ -660,6 +659,7 @@ You're now ready to use the Telescope vault for your research!
 - The vault adapts to your workflow, not vice versa
 - Ask questions - there's always a better way to do things
 - Share what you learn with others
+- Try Claude for troubleshooting. It will get you 90% where you need to be.
 
 **Happy researching!** 🔭
 

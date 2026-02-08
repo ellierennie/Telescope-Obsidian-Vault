@@ -1,4 +1,5 @@
 <%*
+// NOTE: This template should match Reference Note shortcut.md / 1. Reference Note.md // Update both when making changes!
 
 // metaInherit
 
@@ -347,8 +348,15 @@ const sourceCreated = new Date(actualSourceFile.stat.ctime)
     .toLocaleDateString('en-US', {year: '2-digit', month: '2-digit', day: '2-digit'})
     .replace(/\//g, '.');
 
-// Get vault author - call directly in template
-const vaultAuthor = await tp.user.vaultAuthor(tp);
+// Get vault author - inline version for Buttons plugin compatibility 
+let vaultAuthor = 'Unknown Author'; 
+const allVaultFiles = app.vault.getMarkdownFiles(); 
+for (const file of allVaultFiles) { 
+const cache = app.metadataCache.getFileCache(file); 
+if (cache?.frontmatter?.vaultAuthor === true) { vaultAuthor = file.basename; 
+break; 
+	} 
+}
 
 // Get the source note content (excluding YAML frontmatter)
 
@@ -454,7 +462,7 @@ title:${getValue('title')}
 
 itemType:${getValue('itemType')}
 
-noteAuthor: "${vaultAuthor}"
+noteAuthor: "[[${vaultAuthor}]]"
 
 tags: ${getValue('tags')}
 
@@ -520,7 +528,7 @@ citeKey:${getValue('citeKey')}
 
 itemType:${getValue('itemType')}
 
-noteAuthor: "${vaultAuthor}"
+noteAuthor: "[[${vaultAuthor}]]"
 
 tags: ${getValue('tags')}
 
@@ -612,4 +620,4 @@ if (!existingFile) {
 
 }
 
--%>v
+-%>

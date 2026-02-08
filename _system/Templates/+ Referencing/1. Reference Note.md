@@ -342,31 +342,13 @@ const COMMENT = await tp.system.prompt("add brief comment");
 
   
 
-// Create template content using the source creation date from file stats
-
+// Get creation date
 const sourceCreated = new Date(actualSourceFile.stat.ctime)
+    .toLocaleDateString('en-US', {year: '2-digit', month: '2-digit', day: '2-digit'})
+    .replace(/\//g, '.');
 
-    .toLocaleDateString('en-US', {year: '2-digit', month: '2-digit', day: '2-digit'})
-
-    .replace(/\//g, '.');
-
-  
-
-// Handle vault author with fallback
-
-let vaultAuthor = '';
-
-try {
-
-    vaultAuthor = await tp.user.vaultAuthor(tp);
-
-} catch (e) {
-
-    vaultAuthor = "Anonymous"; // Fallback value
-
-}
-
-  
+// Get vault author - call directly in template
+const vaultAuthor = await tp.user.vaultAuthor(tp);
 
 // Get the source note content (excluding YAML frontmatter)
 

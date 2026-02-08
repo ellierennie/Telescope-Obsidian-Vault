@@ -10,14 +10,14 @@ date_saved: <% moment().format('YY.MM.DD') %>
 aliases: 
 tags: 
 note: 
-noteAuthor: <% await tp.user.vaultAuthor(tp) %>
+noteAuthor: "[[<% await tp.user.vaultAuthor(tp) %>]]"
 ---
 ```button
 name Create Reference Note
 type cursor template
 action Reference Note shortcut
 ```
-^button-sv00
+
 # {{title}}
 ## By {% for creator in creators %}{{creator.lastName}}_{{creator.firstName}}, {% endfor %}
 

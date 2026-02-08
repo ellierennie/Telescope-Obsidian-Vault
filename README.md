@@ -295,7 +295,7 @@ This vault is designed for ethnographic research workflows. Suggestions and impr
 MIT License
 
 **Third-party plugins:**  
-Licensed by their respective authors (not included in repository)
+Included for convenience. Each plugin retains its original license (see individual plugin repositories on GitHub).
 
 ### Attribution
 

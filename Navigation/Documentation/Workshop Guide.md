@@ -164,14 +164,14 @@ Tesseract data directory: [empty]
 **Prerequisites:** Readwise account with highlights
 
 **Setup:**
+In Obsidian: **Settings → Community plugins → Readwise Official**
 
-1. Get your API token:
-   - Go to https://readwise.io/access_token
-   - Copy your token
+1. Setting page
+- Customise base folder: Inputs/Readwise
+- **Sync on startup:** Toggle ON
+- Click "Sync now"
 
-2. In Obsidian: **Settings → Community plugins → Readwise Official**
-
-3. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
+2. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
    - Go to https://readwise.io/export/obsidian/preferences
    - Configure each section as follows:
 

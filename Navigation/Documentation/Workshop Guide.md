@@ -83,21 +83,53 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 **Prerequisites:** 
 - Zotero Desktop installed
 - Better BibTeX plugin for Zotero (optional but recommended)
+ - Literature notes will appear in folder `Inputs/Zotero`
 
 **Setup:**
 
 1. In Obsidian: **Settings → Community plugins → Zotero Desktop Connector**
 
 2. Configure these settings:
-   - **Literature notes folder:** `Inputs/Zotero`
-   - **Template file:** `_system/Templates/_Plugin Templates/Zotero Template.md`
-   - **Attachments folder:** `Inputs/Zotero/Attachments` (optional - uses disk space)
 
-3. **Download PDF Utility:**
+**Download PDF Utility:**
    - In the same settings panel, click "Download PDF Utility"
    - This enables PDF highlight extraction
+   - Leave 'PDF Utility Override' empty
 
-4. **Test it:**
+Database: Zotero
+Note Import Location: Inputs/Zotero
+Open the created or updated note(s) after import - ON
+Which notes to open after import - First imported note
+Enable Annotation Concatenation - OFF
+
+Citation Formats
+
+Name: Cite
+Output Format: Formatted Citation
+Citation Style: American Psychological Association 7th edition (or your preferred style)
+
+Import Formats
+Name: Zotero import
+Output path: Import/Zotero/{{citekey}}.md
+Image Output path: Inputs/Zotero/{{citekey}}.md
+
+Image Output Path: Inputs/Zotero/{{citekey}}/Images
+
+Template File
+_system/Templates/_Plugin Templates/Zotero Template.md
+
+Bibliography Stye: American Psychological Association 7th edition
+
+Import Image settings
+Image format: jpg
+Image Quality (jpg only) 90
+Image DPI: 120
+Image OCR: OFF
+Tesseract Path: [empty]
+Image OCR Language: [empty]
+Tesseract data directory: [empty]
+
+4. **Optional test**
    - In Zotero, right-click a paper
    - Select "Send to Obsidian"
    - A note should appear in `Inputs/Zotero/`

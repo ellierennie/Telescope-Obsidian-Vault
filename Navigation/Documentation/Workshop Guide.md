@@ -83,17 +83,22 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 When you create Reference Notes or import sources, the vault needs to know who you are so it can add your name as the note author. 
 
 **How to set up:** 
-1. **Create your People note:** - Navigate to the `People/` folder - Create a new note with your name (e.g., `Rennie, Ellie` or `Smith, Jane`) 
-2. **Add the frontmatter:** 
+1. **Create your People note:** - Use the 'Production' hotkey (Command Control P) and select 5. Profile. Enter name. Go to your Profile note. 
+2. **In source mode (via top right '...'), adjust the frontmatter to add vaultAuthor 'true'.** Paste vaultAuthor: true into your yaml so it looks like this: 
 ````
 yaml 
 --- 
-type: People 
-class: People 
+class: People
+category: People
+type: moc
+title: [name you entered will appear here]
 vaultAuthor: true 
+created: 26.02.11
+tags: 
+flag: false
+note: 
+aliases: 
 --- 
-# Your Name 
-Your bio/info here (optional)  
 ````
 
 **Important:** Only ONE note should have `vaultAuthor: true` - this tells the vault which person is you 

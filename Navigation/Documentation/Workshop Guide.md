@@ -87,7 +87,7 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 
 **Setup:**
 
-1. In Obsidian: **Settings → Community plugins → Zotero Desktop Connector**
+1. In Obsidian: **Settings → Community plugins → Zotero Integration**
 
 2. Configure these settings:
 
@@ -96,29 +96,29 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
    - This enables PDF highlight extraction
    - Leave 'PDF Utility Override' empty
 
-Database: Zotero
+**Database:** Zotero
 Note Import Location: Inputs/Zotero
 Open the created or updated note(s) after import - ON
 Which notes to open after import - First imported note
 Enable Annotation Concatenation - OFF
 
-Citation Formats
+**Citation Formats**
 
-Name: Cite
-Output Format: Formatted Citation
-Citation Style: American Psychological Association 7th edition (or your preferred style)
+**Name:** Cite
+**Output Format:** Formatted Citation
+**Citation Style:** American Psychological Association 7th edition (or your preferred style)
 
-Import Formats
+**Import Formats**
 Name: Zotero import
-Output path: Import/Zotero/{{citekey}}.md
+Output path: Inputs/Zotero/{{citekey}}.md
 Image Output path: Inputs/Zotero/{{citekey}}.md
 
-Image Output Path: Inputs/Zotero/{{citekey}}/Images
+**Image Output Path:** Inputs/Zotero/{{citekey}}/Images
 
-Template File
+**Template File:**
 _system/Templates/_Plugin Templates/Zotero Template.md
 
-Bibliography Stye: American Psychological Association 7th edition
+**Bibliography Stye:** American Psychological Association 7th edition
 
 Import Image settings
 Image format: jpg
@@ -165,7 +165,6 @@ Tesseract data directory: [empty]
 name Create Reference Note
 type cursor template
 action Reference Note shortcut
-```
 - M [[Sources]]{% if url %}
     - URL: [{{title|replace('#', '')|replace('@', '')}}]({{ url }}){% endif %} {% if summary %}
 ## Summary
@@ -177,7 +176,7 @@ dv.view("mentions", {
   fields: ["note"]
 })
 ```
-```
+``
 
 **Highlights Header:**
 ```markdown

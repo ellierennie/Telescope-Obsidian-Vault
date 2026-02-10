@@ -116,13 +116,91 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 
 2. In Obsidian: **Settings → Community plugins → Readwise Official**
 
-3. Configure:
-   - **API Token:** Paste your token
-   - **Export folder:** `Inputs/Readwise`
-   - **Sync on startup:** Toggle ON
-   - Click "Sync now"
+3. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
+   - Go to https://readwise.io/export/obsidian/preferences
+   - Configure each section as follows:
 
-4. Your highlights will appear in `Inputs/Readwise/`
+**File Name:**
+```
+{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_{{title|replace('#', '')|replace('@', '')}}
+```
+
+**Page Title:** Leave blank
+
+**Page Metadata:**
+```markdown
+```button
+name Create Reference Note
+type cursor template
+action Reference Note shortcut
+```
+- M [[Sources]]{% if url %}
+    - URL: [{{title|replace('#', '')|replace('@', '')}}]({{ url }}){% endif %} {% if summary %}
+## Summary
+> {{ summary }} 
+{% endif %}
+**Mentions**
+```dataviewjs
+dv.view("mentions", {
+  fields: ["note"]
+})
+```
+```
+
+**Highlights Header:**
+```markdown
+# Highlights 
+---
+```
+
+**Highlight:**
+```markdown
+<mark style="background-color: #ffd440">{{ highlight_text }}</mark> {% if highlight_tags %}{% for tag in highlight_tags %} #{{tag}} {% endfor %}{% endif %}{% if highlight_note %}
+### Comment
+{{ highlight_note }}
+{% endif %}
+```
+
+**YAML Frontmatter:**
+```yaml
+class: Sources
+category: Readwise
+author: <% await tp.user.processAuthorLinks(tp, "{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}") %>
+sourceTitle: {{title|replace('#', '')|replace('@', '')}}
+type: input
+itemType:  {{category}}
+source: {{source}}
+date_saved: {{last_highlighted_date|date('y.m.j')}}{% if source %}
+site_name: {{ source }} {% endif %}{% if source_url %}
+sourceLink: [🔗]({{ source_url }}){% endif %}{% if highlights_url %}
+readwiseLink:[Readwise](https://readwise.io/bookreview/{{book_id}})
+highlights_url: {{ highlights_url }}{% endif %}{% if num_highlights %}
+num_highlights: {{ num_highlights }}{% endif %}
+flag: null
+tags: {% for tag in document_tags %}[[{{tag}}]] {% endfor %} 
+note:
+```
+
+**Sync Notification:**
+```markdown
+## {{date|date('y.m.j')}}
+**Synced {{num_highlights}} highlight{{num_highlights|pluralize}} from {{num_books}} document{{num_books|pluralize}}.**
+{% for book in books %}    - {{ book.num_highlights_added}} highlights from [[{{ book.title }}]]
+{% endfor %}
+```
+
+4. **Save settings** in Readwise
+
+5. **Back in Obsidian:**
+   - Settings → Readwise Official → Click "Sync now"
+   - Your highlights will appear in `Inputs/Readwise/` with the custom formatting
+
+**Note:** The custom template includes:
+- A "Create Reference Note" button (just like Zotero notes)
+- Proper formatting for highlights with colors
+- Dataview queries for tracking mentions
+- Clean author/title formatting (removes @ and # symbols)
+
 
 ---
 

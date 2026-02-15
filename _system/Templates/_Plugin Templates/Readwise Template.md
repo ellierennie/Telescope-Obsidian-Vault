@@ -9,9 +9,9 @@ note: Readwise template to cut and paste into the template settings
 flag: false
 ---
 ```button
-name Create Reference note
+name Create Reference Note
 type cursor template
-action Reference Note shortcut
+action Buttons/Reference Note
 ```
 ^button-myfq
 

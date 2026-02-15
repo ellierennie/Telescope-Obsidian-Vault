@@ -15,7 +15,7 @@ noteAuthor: "[[<% await tp.user.vaultAuthor(tp) %>]]"
 ```button
 name Create Reference Note
 type cursor template
-action Reference Note shortcut
+action Buttons/Reference Note
 ```
 
 # {{title}}

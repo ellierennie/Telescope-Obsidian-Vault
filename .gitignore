@@ -27,4 +27,5 @@ Inputs/Zotero/Attachments/
 
 
 # Ignore Smart Environment folder
-.smart-envrid_cache/
+.smart-env/
+rid_cache/

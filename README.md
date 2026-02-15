@@ -47,84 +47,197 @@ Then open the folder in Obsidian and trust the vault to enable plugins.
 
 ---
 
-## What's Included
+## Plugin Configuration
 
-### Folder Structure
+### Zotero Integration
 
-```
-📁 Inputs/               ← Sources (gitignored - stays local)
-  📁 Zotero/            ← Academic papers & books
-  📁 Readwise/          ← Web articles, highlights
+**Prerequisites:**
+- Zotero Desktop installed
+- Better BibTeX plugin for Zotero (recommended for stable citekeys)
 
-📁 Notes/               ← Field notes, memos (gitignored)
+**Setup:**
 
-📁 People/              ← Person profiles (gitignored)
+1. **In Obsidian:** Settings → Community plugins → Zotero Integration
 
-📁 Synthesis/           ← Analysis & Reference Notes (gitignored)
-  📁 Reference Notes/   ← Permanent deep-dives on sources
+2. **Configure settings:**
 
-📁 Navigation/          ← Hub pages and documentation
-  📁 Documentation/     ← Guides and hotkey references
-  📁 Notes/            ← Reminders, logs, dashboards
+   **Download PDF Utility:**
+   - Click "Download PDF Utility" in the settings panel
+   - This enables PDF highlight extraction
+   - Leave 'PDF Utility Override' empty
 
-📁 _system/             ← Templates, scripts, styling
-  📁 Templates/        ← Note templates
-  📁 JS_Scripts/       ← Dataview and Templater functions
-```
+   **Database:** Zotero
+   
+   **Note Import Location:** `Inputs/Zotero`
+   
+   **Open the created or updated note(s) after import:** ON
+   
+   **Which notes to open after import:** First imported note
+   
+   **Enable Annotation Concatenation:** OFF
 
-### Pre-configured Plugins
+3. **Citation Formats:**
+   - **Name:** Cite
+   - **Output Format:** Formatted Citation
+   - **Citation Style:** American Psychological Association 7th edition (or your preferred style)
 
-**Essential:**
-- **Dataview** - Dynamic queries and dashboards
-- **Templater** - Template automation
-- **Zotero Desktop Connector** - Import academic sources
-- **Readwise Official** - Sync web highlights
-- **Buttons** - One-click actions in notes
+4. **Import Formats:**
+   - **Name:** Zotero import
+   - **Template File:** `_system/Templates/_Plugin Templates/Zotero Template.md`
+   - **Bibliography Style:** American Psychological Association 7th edition
 
-**Supporting:**
-- Recent Files, Quick Switcher++, Calendar, and more
+5. **Image Settings:**
+   - **Image format:** jpg
+   - **Image Quality:** 90
+   - **Image DPI:** 120
+   - **Image OCR:** OFF
 
-All plugin settings are included (except API keys - see Security below).
-
-### Templates
-
-- **Zotero Template** - Auto-formats imported papers
-- **Readwise Template** - Structures web highlights  
-- **Reference Note** - Permanent analysis of sources
-- **Person Template** - People profiles
-- **Field Notes** - Session notes, meetings, memos
-- **Maps of Content** - Theme/project hubs
+6. **Test:**
+   - In Zotero, right-click a paper
+   - Select "Send to Obsidian"
+   - A note should appear in `Inputs/Zotero/`
 
 ---
 
-## Plugin Configuration
+### Readwise Integration
 
-### Zotero Desktop Connector
-
-**Setup:**
-1. Install Zotero Desktop with Better BibTeX (recommended)
-2. In Obsidian: Settings → Zotero Desktop Connector
-3. Settings are pre-configured:
-   - Literature notes folder: `Inputs/Zotero`
-   - Template: `_system/Templates/_Plugin Templates/Zotero Template.md`
-4. Download PDF Utility (in plugin settings) for highlight extraction
-5. Test: Right-click item in Zotero → "Send to Obsidian"
-
-### Readwise Official
+**Prerequisites:** Readwise account with highlights
 
 **Setup:**
-1. Get your API token from https://readwise.io/access_token
-2. In Obsidian: Settings → Readwise Official
-3. Add your API token (this stays local, not synced to git)
-4. Pre-configured export folder: `Inputs/Readwise`
-5. Click "Sync now"
 
-### Smart Connections (Optional)
+1. **Get your API token:**
+   - Go to https://readwise.io/access_token
+   - Copy your token
 
-If using Smart Connections for AI-powered research:
-1. Add your API key in plugin settings (stays local)
-2. Embeddings are stored in `.smart-env/` (gitignored)
-3. Re-index after cloning to a new machine
+2. **In Obsidian:** Settings → Community plugins → Readwise Official
+   - **API Token:** Paste your token
+   - **Customize base folder:** `Inputs/Readwise`
+   - **Sync on startup:** Toggle ON
+
+3. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
+   - Go to https://readwise.io/export/obsidian/preferences
+   - Configure each section as follows:
+
+**File Name:**
+```
+{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_{{title|replace('#', '')|replace('@', '')}}
+```
+
+**Page Title:** Leave blank
+
+**Page Metadata:**
+````markdown
+```button
+name Create Reference Note
+type cursor template
+action Buttons/Reference Note
+```
+- M [[Sources]]{% if url %}
+    - URL: [{{title|replace('#', '')|replace('@', '')}}]({{ url }}){% endif %} {% if summary %}
+## Summary
+> {{ summary }} 
+{% endif %}
+**Mentions**
+```dataviewjs
+dv.view("mentions", {
+  fields: ["note"]
+})
+```
+````
+
+**Highlights Header:**
+```markdown
+# Highlights 
+---
+```
+
+**Highlight:**
+```markdown
+<mark style="background-color: #ffd440">{{ highlight_text }}</mark> {% if highlight_tags %}{% for tag in highlight_tags %} #{{tag}} {% endfor %}{% endif %}{% if highlight_note %}
+### Comment
+{{ highlight_note }}
+{% endif %}
+```
+
+**YAML Frontmatter:**
+```yaml
+class: Sources
+category: Readwise
+author: <% await tp.user.processAuthorLinks(tp, "{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}") %>
+sourceTitle: {{title|replace('#', '')|replace('@', '')}}
+type: input
+itemType:  {{category}}
+source: {{source}}
+date_saved: {{last_highlighted_date|date('y.m.j')}}{% if source %}
+site_name: {{ source }} {% endif %}{% if source_url %}
+sourceLink: [🔗]({{ source_url }}){% endif %}{% if highlights_url %}
+readwiseLink:[Readwise](https://readwise.io/bookreview/{{book_id}})
+highlights_url: {{ highlights_url }}{% endif %}{% if num_highlights %}
+num_highlights: {{ num_highlights }}{% endif %}
+flag: null
+tags: {% for tag in document_tags %}[[{{tag}}]] {% endfor %} 
+note:
+```
+
+**Sync Notification:**
+```markdown
+## {{date|date('y.m.j')}}
+**Synced {{num_highlights}} highlight{{num_highlights|pluralize}} from {{num_books}} document{{num_books|pluralize}}.**
+{% for book in books %}    - {{ book.num_highlights_added}} highlights from [[{{ book.title }}]]
+{% endfor %}
+```
+
+4. **Save settings** in Readwise
+
+5. **Back in Obsidian:**
+   - Settings → Readwise Official → Click "Sync now"
+   - Your highlights will appear in `Inputs/Readwise/` with custom formatting
+
+**Note:** The custom template includes:
+- A "Create Reference Note" button (just like Zotero notes)
+- Proper formatting for highlights with colors
+- Dataview queries for tracking mentions
+- Clean author/title formatting (removes @ and # symbols)
+
+---
+
+### Set Yourself as Vault Author
+
+When you create Reference Notes or import sources, the vault needs to know who you are so it can add your name as the note author.
+
+**How to set up:**
+
+1. **Create your People note:**
+   - Use the Production hotkey (Cmd+Ctrl+P) and select "5. Profile"
+   - Enter your name
+
+2. **Add vaultAuthor to frontmatter:**
+   - Switch to source mode (click '...' in top right)
+   - Add `vaultAuthor: true` to your YAML frontmatter:
+
+```yaml
+---
+class: People
+category: People
+type: moc
+title: Your Name
+vaultAuthor: true
+created: 26.02.11
+tags: 
+flag: false
+note: 
+aliases: 
+---
+```
+
+3. **Important:** Only ONE note should have `vaultAuthor: true` - this tells the vault which person is you
+
+**Test it:**
+- Import a Zotero note or create a Reference Note
+- Check the `noteAuthor` field
+- It should show your name as a clickable link: `noteAuthor: "[[Your Name]]"`
+
+**Note:** If you don't set this up, notes will show `noteAuthor: "[[Unknown Author]]"` instead.
 
 ---
 
@@ -145,6 +258,7 @@ If using Smart Connections for AI-powered research:
 - Smart Connections embeddings (`.smart-env/`)
 - Zotero attachments
 - Obsidian workspace/cache files
+- KOI-Sync cache (`rid_cache/`)
 
 ### Verify Security
 
@@ -153,9 +267,10 @@ After setup, check that sensitive files are ignored:
 git check-ignore .obsidian/plugins/readwise-official/data.json
 git check-ignore .obsidian/plugins/koi-sync/data.json
 git check-ignore .smart-env/
+git check-ignore rid_cache/
 ```
 
-All three should output their filepath (meaning they're ignored).
+All should output their filepath (meaning they're ignored).
 
 ---
 
@@ -175,7 +290,7 @@ All three should output their filepath (meaning they're ignored).
    - Link to people: `[[People/Person Name]]`
 
 4. **Capture quotes**
-   - Select text → Cmd+Shift+P → Capture Quote
+   - Select text → Cmd+Shift+R → Capture Quote
    - Quotes auto-appear in source's Reference Note
 
 5. **Organize with MOCs**
@@ -196,7 +311,7 @@ All three should output their filepath (meaning they're ignored).
 | **Cmd+P** | Command Palette |
 | **Cmd+O** | Quick switcher (find notes) |
 | **Cmd+Shift+N** | New Notes menu |
-| **Cmd+Shift+P** | Referencing menu (quotes, references) |
+| **Cmd+Shift+R** | Referencing menu (quotes, references) |
 | **Ctrl+Cmd+L** | Log Tool (quick capture) |
 | **Ctrl+Cmd+Z** | Import from Zotero |
 
@@ -228,24 +343,6 @@ git push
 ```
 
 Your personal notes (in gitignored folders) won't be affected.
-
----
-
-## Customization
-
-### Modify Templates
-
-Templates are in `_system/Templates/`:
-- Edit templates to change default structure
-- Changes apply to all new notes using that template
-
-### Adjust Hotkeys
-
-Settings → Hotkeys → Search for command → Reassign
-
-### Add New Dataview Queries
-
-Custom queries go in `_system/Templates/JS_Scripts/JS-DV/`
 
 ---
 
@@ -286,6 +383,19 @@ This vault is designed for ethnographic research workflows. Suggestions and impr
 
 ---
 
+## About
+
+Created for ethnographic and qualitative research workflows by Ellie Rennie.
+
+**Development:**  
+Ellie Rennie and Matthew Green (Research Assistant)
+
+**For questions or support:**
+- Workshop Guide: [Navigation/Documentation/Workshop Guide.md](Navigation/Documentation/Workshop%20Guide.md)
+- GitHub Issues: https://github.com/ellierennie/Telescope-Obsidian-Vault/issues
+
+---
+
 ## License
 
 **Vault structure, templates, and documentation:**  
@@ -300,17 +410,7 @@ Included for convenience. Each plugin retains its original license (see individu
 ### Attribution
 
 When using or adapting this vault:
-> "Based on the *Telescope Obsidian Vault* by Ellie Rennie (CC BY-NC 4.0)"
-
----
-
-## About
-
-Created for ethnographic and qualitative research workflows by Ellie Rennie and Matthew Green.
-
-**For questions or support:**
-- Workshop Guide: [Navigation/Documentation/Workshop Guide.md](Navigation/Documentation/Workshop%20Guide.md)
-- GitHub Issues: https://github.com/ellierennie/Telescope-Obsidian-Vault/issues
+> "Based on the *Telescope Obsidian Vault* by Ellie Rennie and Matthew Green (CC BY-NC 4.0)"
 
 ---
 

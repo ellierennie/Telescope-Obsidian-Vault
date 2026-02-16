@@ -2,7 +2,16 @@ function mentions(dv, input) {
     const customFields = input?.fields || [];
     const excludeClasses = input?.excludeClass || [];
     const excludeCategory = input?.excludeCategory || [];
-    const activeNote = dv.current().file.name;
+    
+    // Get current note with error handling
+    const currentNote = dv.current();
+    if (!currentNote || !currentNote.file) {
+        dv.paragraph("⚠️ Unable to load mentions - note context not available.");
+        return;
+    }
+    
+    const activeNote = currentNote.file.name;
+    
     
     // Get current note's source from YAML if it exists
     const currentPage = dv.page(activeNote);

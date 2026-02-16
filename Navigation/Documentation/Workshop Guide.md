@@ -8,8 +8,6 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 - Track quotes and connections between ideas
 - Organize people, themes, and projects
 
-[[Sam de Silva catch-up]] 
-
 ## Part 1: Getting Started - Two Installation Options
 
 ### Option A: Clone for Independent Use

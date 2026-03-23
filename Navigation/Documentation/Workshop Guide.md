@@ -733,7 +733,220 @@ Learn more: https://blacksmithgu.github.io/obsidian-dataview/
 
 ---
 
-## Part 9: Getting Help
+## Part 9: Advanced Features
+
+### Using Local AI with Ollama (Privacy-Safe Vault Analysis)
+
+**What is Ollama?**
+Ollama lets you run AI models **completely locally** on your computer - nothing leaves your machine. This is safe for sensitive research data.
+
+**Why use it?**
+- ✅ Analyze themes across all your notes
+- ✅ Generate research summaries
+- ✅ Find patterns in field notes
+- ✅ 100% private - no data sent to external servers
+- ✅ Free (after downloading models)
+- ✅ Ethics committee approved (local only)
+
+**System Requirements:**
+- **Apple Silicon (M1/M2/M3):** Works well even on MacBook Air 8GB
+- **Intel Mac:** Possible but slow
+- **Recommended:** 8GB+ RAM for 3B models, 16GB+ for 7B models
+
+---
+
+#### Setup Ollama
+
+**1. Install Ollama:**
+```bash
+# Using Homebrew
+brew install ollama
+```
+
+**2. Start Ollama service:**
+```bash
+ollama serve
+```
+Leave this terminal window open, or add `&` to run in background.
+
+**3. Download a model:**
+```bash
+# For MacBook Air M1 8GB - best choice
+ollama pull llama3.2:3b
+
+# For more powerful Macs (16GB+ RAM)
+ollama pull llama3:8b
+```
+
+**Model sizes:**
+- `3b` models: ~2GB download, fast on 8GB RAM
+- `7b` models: ~4GB download, needs 16GB RAM recommended
+- `13b+` models: Only for powerful machines with 32GB+ RAM
+
+**4. Test it:**
+```bash
+ollama run llama3.2:3b "Hello! Can you help me analyze research notes?"
+```
+
+---
+
+#### Query Your Vault
+
+**Basic single note analysis:**
+```bash
+cd /path/to/your/vault
+
+# Analyze one note
+ollama run llama3.2:3b "$(cat Notes/my-note.md)" "Summarize the key points"
+```
+
+**Analyze multiple notes:**
+```bash
+# All notes in a folder
+cat Notes/*.md | ollama run llama3.2:3b "What are the common themes?"
+
+# All Reference Notes
+cat Synthesis/Reference\ Notes/*.md | ollama run llama3.2:3b "Summarize the main arguments across these sources"
+```
+
+**Query specific topics:**
+```bash
+# Find notes about a topic, then analyze
+cat $(grep -l "stablecoins" Notes/*.md Synthesis/**/*.md) | ollama run llama3.2:3b "What are the main themes about stablecoins in my research?"
+```
+
+---
+
+#### Example Queries for Your Vault
+
+**Research synthesis:**
+```bash
+# Analyze all Reference Notes
+cat Synthesis/Reference\ Notes/*.md | ollama run llama3.2:3b "Create a literature review summary organized by themes"
+```
+
+**Field note analysis:**
+```bash
+# Find patterns in field observations
+cat Notes/*.md | ollama run llama3.2:3b "What are the recurring patterns and themes in these field notes?"
+```
+
+**MOC generation:**
+```bash
+# Generate MOC suggestions
+cat Notes/*water*.md | ollama run llama3.2:3b "Suggest a structure for organizing these notes into a Map of Content about water management"
+```
+
+**Property maintenance:**
+```bash
+# Analyze maintenance tasks
+cat Notes/*property*.md Notes/*maintenance*.md | ollama run llama3.2:3b "Summarize all maintenance tasks by location, with dates and costs"
+```
+
+---
+
+#### Create Helper Scripts
+
+Save this as `vault-query.sh` in your vault directory:
+
+```bash
+#!/bin/bash
+# Usage: ./vault-query.sh "your question here"
+
+QUERY="$1"
+MODEL="llama3.2:3b"
+
+if [ -z "$QUERY" ]; then
+    echo "Usage: ./vault-query.sh \"your question\""
+    exit 1
+fi
+
+echo "Analyzing vault with query: $QUERY"
+echo "This may take a moment..."
+
+# Collect all markdown files (excluding system folders)
+CONTENT=$(find Notes Synthesis People -name "*.md" 2>/dev/null -exec cat {} \;)
+
+# Query Ollama
+echo "$CONTENT" | ollama run $MODEL "$QUERY"
+```
+
+Make it executable:
+```bash
+chmod +x vault-query.sh
+```
+
+Use it:
+```bash
+./vault-query.sh "What are my main research themes?"
+./vault-query.sh "Summarize all findings about contribution systems"
+./vault-query.sh "What gaps exist in my property maintenance tracking?"
+```
+
+---
+
+#### Performance Tips
+
+**For M1/M2 MacBook Air (8GB):**
+- ✅ Use `llama3.2:3b` - fast and capable
+- ⚠️ `llama3:8b` works but slower
+- ❌ Avoid 13B+ models
+
+**For faster queries:**
+- Query specific folders, not entire vault
+- Use smaller context (fewer notes)
+- Close other apps while running
+
+**Battery impact:**
+- Ollama uses significant CPU
+- Plug in for longer sessions
+- Your Mac may get warm - this is normal
+
+---
+
+#### Privacy & Ethics
+
+**Why Ollama is safe for research data:**
+- ✅ Everything runs on your local machine
+- ✅ No internet connection required (after model download)
+- ✅ No data sent to external servers
+- ✅ Complies with research ethics requirements
+- ✅ Works with IRB-protected data
+
+**Compare to cloud AI:**
+- ❌ Claude Code/ChatGPT: Sends data to external servers
+- ❌ Violates most research confidentiality agreements
+- ❌ Not suitable for participant data
+
+**When NOT to use Ollama:**
+- If you need cutting-edge AI capabilities (cloud AI is more advanced)
+- If you need very fast responses (cloud AI is faster)
+- If your machine is too slow (try cloud AI on sanitized data only)
+
+---
+
+#### Troubleshooting
+
+**"command not found: ollama"**
+- Make sure you ran `brew install ollama`
+- Restart your terminal
+
+**"connection refused"**
+- Start the Ollama service: `ollama serve`
+- Or run in background: `ollama serve &`
+
+**"out of memory" or very slow**
+- Try a smaller model: `ollama pull llama3.2:3b`
+- Close other applications
+- Query fewer notes at once
+
+**Model takes forever to respond**
+- Your model might be too large for your RAM
+- Switch to `3b` model instead of `7b` or `8b`
+
+---
+
+## Part 10: Getting Help
 
 ### Resources
 
@@ -751,7 +964,7 @@ Learn more: https://blacksmithgu.github.io/obsidian-dataview/
 
 ---
 
-## Part 10: Workshop Exercises
+## Part 11: Workshop Exercises
 
 ### Exercise 1: Import and Reference (15 mins)
 

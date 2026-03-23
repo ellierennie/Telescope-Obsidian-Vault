@@ -133,7 +133,8 @@ type cursor template
 action Buttons/Reference Note
 ```
 - M [[Sources]]{% if url %}
-    - URL: [{{title|replace('#', '')|replace('@', '')}}]({{ url }}){% endif %} {% if summary %}
+    - URL: [{{title|replace('#', '')|replace('@', '')}}]({{ url }}){% endif %}{% if source_url %}
+    - Source: [View original]({{ source_url }}){% endif %} {% if summary %}
 ## Summary
 > {{ summary }} 
 {% endif %}
@@ -198,6 +199,43 @@ note:
 - Proper formatting for highlights with colors
 - Dataview queries for tracking mentions
 - Clean author/title formatting (removes @ and # symbols)
+- Direct links to source material (including specific tweets)
+
+---
+
+#### Mobile Workflow for Readwise
+
+**Saving content from mobile devices (especially tweets):**
+
+The Readwise Official plugin syncs highlights, so you need to highlight content for it to appear in Obsidian.
+
+**Best method - Use Readwise Reader app:**
+
+1. **From X (Twitter) mobile app:**
+   - Tap the share icon on a tweet
+   - Select "Copy Link"
+
+2. **In Readwise Reader app:**
+   - Tap "+" to add new item
+   - Paste the tweet URL
+   - Reader imports the tweet
+
+3. **Highlight in Reader:**
+   - Open the tweet in Reader
+   - Highlight the tweet text (or any part you want)
+   - Your highlight syncs to Obsidian with the custom template
+
+4. **In Obsidian:**
+   - Settings → Readwise Official → Sync now
+   - The tweet appears in `Inputs/Readwise/` with a direct link
+
+**Alternative - Browser extension on desktop:**
+- Install Readwise browser extension
+- Open tweet on desktop
+- Click extension → Save
+- More reliable than mobile app for tweets
+
+**Why highlighting is required:** Readwise only syncs highlighted content to Obsidian. Just saving an item keeps it in Reader but doesn't send it to your vault.
 
 ---
 

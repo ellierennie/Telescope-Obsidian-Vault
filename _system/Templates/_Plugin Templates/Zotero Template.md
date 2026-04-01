@@ -3,7 +3,7 @@ type: Input
 class: Sources
 category: Zotero
 source: "[[<% tp.file.title %>]]"
-author: <% await tp.user.processAuthorLinks(tp, "{% for creator in creators %} {{creator.lastName}}_{{creator.firstName}}, {% endfor %}") %>
+author: <% await tp.user.processAuthorLinks(tp, "{% for creator in creators %}{{creator.firstName}} {{creator.lastName}}, {% endfor %}") %>
 title: "{{ title }}"
 citeKey: {{citekey}}
 date_saved: <% moment().format('YY.MM.DD') %>
@@ -19,7 +19,7 @@ action Buttons/Reference Note
 ```
 
 # {{title}}
-## By {% for creator in creators %}{{creator.lastName}}_{{creator.firstName}}, {% endfor %}
+## By {% for creator in creators %}{{creator.firstName}} {{creator.lastName}}, {% endfor %}
 
 {% if abstractNote %}
 ## Abstract

@@ -81,8 +81,11 @@ This guide will help you set up and use the Telescope Obsidian vault for ethnogr
 When you create Reference Notes or import sources, the vault needs to know who you are so it can add your name as the note author. 
 
 **How to set up:** 
-1. **Create your People note:** - Use the 'Production' hotkey (Command Control P) and select 5. Profile. Enter name. Go to your Profile note. 
-2. **In source mode (via top right '...'), adjust the frontmatter to add vaultAuthor 'true'.** Paste vaultAuthor: true into your yaml so it looks like this: 
+1. **Create your People note:** - Use the 'Production' hotkey (Cmd+Shift+P) and select 5. Profile. Enter name. Go to your Profile note. 
+2. **In source mode (via top right '...'), manually add vaultAuthor to the frontmatter.** 
+   - Switch to source mode by clicking the '...' menu in the top right
+   - In the YAML frontmatter, type a new line: `vaultAuthor: true`
+   - Your frontmatter should look like this: 
 ````
 yaml 
 --- 
@@ -746,7 +749,7 @@ Ollama lets you run AI models **completely locally** on your computer - nothing 
 - ✅ Find patterns in field notes
 - ✅ 100% private - no data sent to external servers
 - ✅ Free (after downloading models)
-- ✅ Ethics committee approved (local only)
+
 
 **System Requirements:**
 - **Apple Silicon (M1/M2/M3):** Works well even on MacBook Air 8GB
@@ -755,152 +758,46 @@ Ollama lets you run AI models **completely locally** on your computer - nothing 
 
 ---
 
-#### Setup Ollama
+#### Setup and Use with Obsidian Plugins
 
 **1. Install Ollama:**
 ```bash
 # Using Homebrew
 brew install ollama
-```
 
-**2. Start Ollama service:**
-```bash
-ollama serve
-```
-Leave this terminal window open, or add `&` to run in background.
+# Start the service (auto-start on login)
+brew services start ollama
 
-**3. Download a model:**
-```bash
-# For MacBook Air M1 8GB - best choice
+# Download a model
 ollama pull llama3.2:3b
-
-# For more powerful Macs (16GB+ RAM)
-ollama pull llama3:8b
 ```
 
-**Model sizes:**
-- `3b` models: ~2GB download, fast on 8GB RAM
-- `7b` models: ~4GB download, needs 16GB RAM recommended
-- `13b+` models: Only for powerful machines with 32GB+ RAM
+**2. Install an Obsidian plugin:**
 
-**4. Test it:**
-```bash
-ollama run llama3.2:3b "Hello! Can you help me analyze research notes?"
-```
+Choose one of these plugins to use Ollama with your vault:
 
----
+**Smart Connections** (Recommended - you may already have this)
+- Settings → Community Plugins → Smart Connections
+- Settings → Smart Connections → Chat Model
+- Provider: Ollama
+- Model: `llama3.2:3b`
+- Base URL: `http://localhost:11434`
 
-#### Query Your Vault
+**Obsidian Copilot**
+- Settings → Community Plugins → Browse → "Copilot"
+- Install and Enable
+- Settings → Copilot → API Provider
+- Select Ollama or OpenAI-compatible
+- Model: `llama3.2:3b`
+- Base URL: `http://localhost:11434`
 
-**Basic single note analysis:**
-```bash
-cd /path/to/your/vault
+**3. Start querying:**
 
-# Analyze one note
-ollama run llama3.2:3b "$(cat Notes/my-note.md)" "Summarize the key points"
-```
+Once configured, use the plugin's chat interface to ask questions about your vault:
+- "Summarize all my notes about contribution systems"
+- "What are the main themes in my stablecoins research?"
+- "Find connections between water management and property notes"
 
-**Analyze multiple notes:**
-```bash
-# All notes in a folder
-cat Notes/*.md | ollama run llama3.2:3b "What are the common themes?"
-
-# All Reference Notes
-cat Synthesis/Reference\ Notes/*.md | ollama run llama3.2:3b "Summarize the main arguments across these sources"
-```
-
-**Query specific topics:**
-```bash
-# Find notes about a topic, then analyze
-cat $(grep -l "stablecoins" Notes/*.md Synthesis/**/*.md) | ollama run llama3.2:3b "What are the main themes about stablecoins in my research?"
-```
-
----
-
-#### Example Queries for Your Vault
-
-**Research synthesis:**
-```bash
-# Analyze all Reference Notes
-cat Synthesis/Reference\ Notes/*.md | ollama run llama3.2:3b "Create a literature review summary organized by themes"
-```
-
-**Field note analysis:**
-```bash
-# Find patterns in field observations
-cat Notes/*.md | ollama run llama3.2:3b "What are the recurring patterns and themes in these field notes?"
-```
-
-**MOC generation:**
-```bash
-# Generate MOC suggestions
-cat Notes/*water*.md | ollama run llama3.2:3b "Suggest a structure for organizing these notes into a Map of Content about water management"
-```
-
-**Property maintenance:**
-```bash
-# Analyze maintenance tasks
-cat Notes/*property*.md Notes/*maintenance*.md | ollama run llama3.2:3b "Summarize all maintenance tasks by location, with dates and costs"
-```
-
----
-
-#### Create Helper Scripts
-
-Save this as `vault-query.sh` in your vault directory:
-
-```bash
-#!/bin/bash
-# Usage: ./vault-query.sh "your question here"
-
-QUERY="$1"
-MODEL="llama3.2:3b"
-
-if [ -z "$QUERY" ]; then
-    echo "Usage: ./vault-query.sh \"your question\""
-    exit 1
-fi
-
-echo "Analyzing vault with query: $QUERY"
-echo "This may take a moment..."
-
-# Collect all markdown files (excluding system folders)
-CONTENT=$(find Notes Synthesis People -name "*.md" 2>/dev/null -exec cat {} \;)
-
-# Query Ollama
-echo "$CONTENT" | ollama run $MODEL "$QUERY"
-```
-
-Make it executable:
-```bash
-chmod +x vault-query.sh
-```
-
-Use it:
-```bash
-./vault-query.sh "What are my main research themes?"
-./vault-query.sh "Summarize all findings about contribution systems"
-./vault-query.sh "What gaps exist in my property maintenance tracking?"
-```
-
----
-
-#### Performance Tips
-
-**For M1/M2 MacBook Air (8GB):**
-- ✅ Use `llama3.2:3b` - fast and capable
-- ⚠️ `llama3:8b` works but slower
-- ❌ Avoid 13B+ models
-
-**For faster queries:**
-- Query specific folders, not entire vault
-- Use smaller context (fewer notes)
-- Close other apps while running
-
-**Battery impact:**
-- Ollama uses significant CPU
-- Plug in for longer sessions
-- Your Mac may get warm - this is normal
 
 ---
 
@@ -913,36 +810,34 @@ Use it:
 - ✅ Complies with research ethics requirements
 - ✅ Works with IRB-protected data
 
-**Compare to cloud AI:**
-- ❌ Claude Code/ChatGPT: Sends data to external servers
+**Compare to cloud AI (Claude Code, ChatGPT, Copilot with API keys):**
+- ❌ Sends data to external servers
 - ❌ Violates most research confidentiality agreements
 - ❌ Not suitable for participant data
 
-**When NOT to use Ollama:**
-- If you need cutting-edge AI capabilities (cloud AI is more advanced)
-- If you need very fast responses (cloud AI is faster)
-- If your machine is too slow (try cloud AI on sanitized data only)
+**Always use local Ollama for sensitive research data and still seek permission from your Ethics committee if required.**
 
 ---
 
 #### Troubleshooting
 
-**"command not found: ollama"**
-- Make sure you ran `brew install ollama`
-- Restart your terminal
+**"Connection refused" or plugin can't connect:**
+- Make sure Ollama is running: `brew services list | grep ollama`
+- Should say "started"
+- If not: `brew services start ollama`
 
-**"connection refused"**
-- Start the Ollama service: `ollama serve`
-- Or run in background: `ollama serve &`
+**"Model not found":**
+- Check installed models: `ollama list`
+- Model name must match exactly: `llama3.2:3b`
 
-**"out of memory" or very slow**
-- Try a smaller model: `ollama pull llama3.2:3b`
-- Close other applications
-- Query fewer notes at once
+**Very slow responses:**
+- Normal on M1 8GB - first response can take 1-2 minutes
+- Subsequent responses are faster (model stays in memory)
+- Close other applications to free up RAM
 
-**Model takes forever to respond**
-- Your model might be too large for your RAM
-- Switch to `3b` model instead of `7b` or `8b`
+**For more help:**
+- Ollama documentation: https://ollama.com/
+- Plugin-specific settings in Obsidian
 
 ---
 

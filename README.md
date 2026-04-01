@@ -200,6 +200,16 @@ note:
 - Dataview queries for tracking mentions
 - Clean author/title formatting (removes @ and # symbols)
 - Direct links to source material (including specific tweets)
+- **Full-text article content** (syncs by default - see below to control)
+
+**Full-Text Article Sync:**
+By default, Readwise syncs complete article text along with your highlights. This gives you the full content for analysis.
+
+**To control full-text sync:**
+- Go to https://readwise.io/export/obsidian/preferences
+- Find the **"Full Document Text Link"** and **"Full Document Text"** sections
+- **To sync full text:** Leave the default content in these sections
+- **To sync only highlights:** Delete all content from both sections (leave them blank)
 
 ---
 

@@ -8,6 +8,8 @@
 Notes/**
 Inputs/**
 Inputs/Zotero/Attachments/
+People/
+Synthesis/
 
 # Obsidian: block workspace/cache but keep most settings
 .obsidian/workspace.json

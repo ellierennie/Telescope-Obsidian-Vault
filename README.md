@@ -246,12 +246,13 @@ When you create Reference Notes or import sources, the vault needs to know who y
 **How to set up:**
 
 1. **Create your People note:**
-   - Use the Production hotkey (Cmd+Ctrl+P) and select "5. Profile"
+   - Use the Production hotkey (Cmd+Shift+P) and select "5. Profile"
    - Enter your name
 
 2. **Add vaultAuthor to frontmatter:**
    - Switch to source mode (click '...' in top right)
-   - Add `vaultAuthor: true` to your YAML frontmatter:
+   - Manually type a new line: `vaultAuthor: true`
+   - Your frontmatter should look like this:
 
 ```yaml
 ---

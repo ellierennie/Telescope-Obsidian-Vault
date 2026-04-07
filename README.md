@@ -116,11 +116,17 @@ Then open the folder in Obsidian and trust the vault to enable plugins.
 
 3. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
    - Go to https://readwise.io/export/obsidian/preferences
+   - If you would like to include the full text of Readwise articles - not just highlights - then toggle "Export all Reader Documents" to ON. If you do not toggle this, then you will only receive what you have highlighted in your note, and the Full Document section will not be visible. In this case you can skip the instructions for the Full Document field (below). If you choose Full Document then you will create two notes - one with highlights only, which contains a link to a second note with the full text. 
    - Configure each section as follows:
 
 **File Name:**
 ```
 {{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_{{title|replace('#', '')|replace('@', '')}}
+```
+
+**Full Document Text file name**
+```
+{{author}}, {{title}} FULL DOC
 ```
 
 **Page Title:** Leave blank

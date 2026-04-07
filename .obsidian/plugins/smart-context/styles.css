@@ -1,0 +1,49 @@
+.sc-modal-suggestion-has-icon {
+  display: flex;
+  span:has(svg) {
+    justify-content: flex-end;
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.setting-explanation {
+  /* should be easy to highlight and copy */
+  & code {
+    cursor: text;
+    user-select: all;
+  }
+}
+
+
+/* Context Codeblock */
+.sc-tree {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sc-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sc-size {
+  opacity: 0.6;
+  margin-left: 4px;
+  font-size: 0.85em;
+}
+
+.sc-toggle {
+  width: 1em;
+  display: inline-block;
+  text-align: center;
+}
+
+.sc-file>.sc-label:hover,
+.sc-dir>.sc-label:hover {
+  background: var(--background-modifier-hover);
+}
+
+.sc-external-btn {
+  margin-top: 8px;
+}

@@ -23,5 +23,5 @@
   ],
   "citeSuggestTemplate": "[[{{citekey}}]]",
   "openNoteAfterImport": true,
-  "whichNotesToOpenAfterImport": "first-imported-note"
+  "whichNotesToOpenAfterImport": "all-imported-notes"
 }

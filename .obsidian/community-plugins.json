@@ -28,6 +28,11 @@
   "obsidian-tasks-plugin",
   "obsidian-leaflet-plugin",
   "buttons",
-  "koi-sync",
-  "smart-connections"
+  "smart-connections",
+  "smart-chat",
+  "smart-connect-pro",
+  "smart-context",
+  "smart-file-nav",
+  "smart-connect",
+  "smart-lookup"
 ]

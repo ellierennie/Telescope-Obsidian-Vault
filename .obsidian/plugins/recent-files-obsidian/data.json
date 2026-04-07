@@ -1,60 +1,188 @@
 {
   "recentFiles": [
     {
-      "basename": "Ben-Meir, Ilan",
-      "path": "People/Ben-Meir, Ilan.md"
+      "basename": "goldenfeinLostLoopWho2024",
+      "path": "Inputs/Zotero/goldenfeinLostLoopWho2024.md"
     },
     {
-      "basename": "REF_sissonWhyThereData2024",
-      "path": "Synthesis/Reference Notes/Sources/REF_sissonWhyThereData2024.md"
+      "basename": "Stephen Marche, I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever",
+      "path": "Inputs/Readwise/Full Document Contents/Articles/Stephen Marche, I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever.md"
     },
     {
-      "basename": "sissonWhyThereData2024",
-      "path": "Inputs/Zotero/sissonWhyThereData2024.md"
+      "basename": "REF_Stephen Marche, I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever",
+      "path": "Synthesis/Reference Notes/Sources/REF_Stephen Marche, I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever.md"
     },
     {
-      "basename": "REF_andrejevicValueDigitalTwins2025",
-      "path": "Synthesis/Reference Notes/Sources/REF_andrejevicValueDigitalTwins2025.md"
+      "basename": "Stephen Marche_I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever",
+      "path": "Inputs/Readwise/Articles/Stephen Marche_I Wrote a Novel Using AI. Writers Must Accept Artificial Intelligence – But We Are as Valuable as Ever.md"
     },
     {
-      "basename": "KOI Project",
-      "path": "Notes/KOI Project.md"
+      "basename": "Latest Readwise Syncs",
+      "path": "Navigation/Inputs/Latest Readwise Syncs.md"
     },
     {
-      "basename": "Sisson, David",
-      "path": "People/Sisson, David.md"
-    },
-    {
-      "basename": "Andrejevic, Mark",
-      "path": "People/Andrejevic, Mark.md"
-    },
-    {
-      "basename": "andrejevicValueDigitalTwins2025",
-      "path": "Inputs/Zotero/andrejevicValueDigitalTwins2025.md"
-    },
-    {
-      "basename": "People",
-      "path": "Navigation/Inputs/People.md"
+      "basename": "Stephen Marche",
+      "path": "People/Stephen Marche.md"
     },
     {
       "basename": "Home",
       "path": "Navigation/Home.md"
     },
     {
-      "basename": "🔭 Channels",
-      "path": "Navigation/KOI/🔭 Channels.md"
+      "basename": "AI and Creative Industries",
+      "path": "Notes/AI and Creative Industries.md"
     },
     {
-      "basename": "🔭 Quotes",
-      "path": "Navigation/KOI/🔭 Quotes.md"
+      "basename": "PERN Rachel Aalders talk",
+      "path": "Notes/Sessions/PERN Rachel Aalders talk.md"
     },
     {
-      "basename": "🔭 People",
-      "path": "Navigation/KOI/🔭 People.md"
+      "basename": "PERN notes",
+      "path": "Notes/PERN notes.md"
     },
     {
-      "basename": "🔭 Reference Notes",
-      "path": "Navigation/KOI/🔭 Reference Notes.md"
+      "basename": "EZI",
+      "path": "Notes/EZI.md"
+    },
+    {
+      "basename": "mirror.xyz_IV. The Existing Web3 Identity Stack",
+      "path": "Inputs/Readwise/Articles/mirror.xyz_IV. The Existing Web3 Identity Stack.md"
+    },
+    {
+      "basename": "Cam Thompson_This Free-to-Mint Soulbound NFT Tracks Your Web3 Work History",
+      "path": "Inputs/Readwise/Articles/Cam Thompson_This Free-to-Mint Soulbound NFT Tracks Your Web3 Work History.md"
+    },
+    {
+      "basename": "Benjamin Bratton_Is European AI a Lost Cause Not Necessarily.",
+      "path": "Inputs/Readwise/Articles/Benjamin Bratton_Is European AI a Lost Cause Not Necessarily..md"
+    },
+    {
+      "basename": "contribution systems",
+      "path": "Notes/contribution systems.md"
+    },
+    {
+      "basename": "eco capital",
+      "path": "Notes/eco capital.md"
+    },
+    {
+      "basename": "2604020704_Jason_Potts_Ecocapital_is_produced_through_what_we_h",
+      "path": "Synthesis/Quotes/2604020704_Jason_Potts_Ecocapital_is_produced_through_what_we_h.md"
+    },
+    {
+      "basename": "2. Reminders",
+      "path": "Navigation/Notes/2. Reminders.md"
+    },
+    {
+      "basename": "REF_pottsMakingEcocapitalInstitutions",
+      "path": "Synthesis/Reference Notes/Sources/REF_pottsMakingEcocapitalInstitutions.md"
+    },
+    {
+      "basename": "Gregory Landua",
+      "path": "People/Gregory Landua.md"
+    },
+    {
+      "basename": "pottsMakingEcocapitalInstitutions",
+      "path": "Inputs/Zotero/pottsMakingEcocapitalInstitutions.md"
+    },
+    {
+      "basename": "Jake Goldenfein",
+      "path": "People/Jake Goldenfein.md"
+    },
+    {
+      "basename": "Ellie Rennie",
+      "path": "People/Ellie Rennie.md"
+    },
+    {
+      "basename": "Rennie, Ellie",
+      "path": "People/Rennie, Ellie.md"
+    },
+    {
+      "basename": "Goldenfein, Jake",
+      "path": "People/Goldenfein, Jake.md"
+    },
+    {
+      "basename": "People",
+      "path": "_system/Classes/People.md"
+    },
+    {
+      "basename": "REF_goldenfeinLostLoopWho2024",
+      "path": "Synthesis/Reference Notes/Sources/REF_goldenfeinLostLoopWho2024.md"
+    },
+    {
+      "basename": "REF_pottsEmbeddings2024",
+      "path": "Synthesis/Reference Notes/Sources/REF_pottsEmbeddings2024.md"
+    },
+    {
+      "basename": "kealeyModellingScienceContribution2014",
+      "path": "Inputs/Zotero/kealeyModellingScienceContribution2014.md"
+    },
+    {
+      "basename": "Terence Kealey",
+      "path": "People/Terence Kealey.md"
+    },
+    {
+      "basename": "Gregory Landua_Regen Token Evolution",
+      "path": "Inputs/Readwise/Articles/Gregory Landua_Regen Token Evolution.md"
+    },
+    {
+      "basename": "pottsEmbeddings2024",
+      "path": "Inputs/Zotero/pottsEmbeddings2024.md"
+    },
+    {
+      "basename": "Landua, Gregory",
+      "path": "People/Landua, Gregory.md"
+    },
+    {
+      "basename": "gregory, landua",
+      "path": "People/gregory, landua.md"
+    },
+    {
+      "basename": "gregory_landua_Tweets from Gregory Landua (🌳,🌳,🌳)",
+      "path": "Inputs/Readwise/Tweets/gregory_landua_Tweets from Gregory Landua (🌳,🌳,🌳).md"
+    },
+    {
+      "basename": "Test note",
+      "path": "Notes/Test note.md"
+    },
+    {
+      "basename": "Buttons",
+      "path": "Navigation/Documentation/Buttons.md"
+    },
+    {
+      "basename": "AI and labour",
+      "path": "Notes/AI and labour.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Vault_Notes_Error_404_System@20260401_083931",
+      "path": "Notes/AI_Inbox/Vault_Notes_Error_404_System@20260401_083931.md"
+    },
+    {
+      "basename": "Workshop Guide",
+      "path": "Navigation/Documentation/Workshop Guide.md"
+    },
+    {
+      "basename": "Git_Commands_Reference",
+      "path": "Navigation/Documentation/Git_Commands_Reference.md"
+    },
+    {
+      "basename": "Documentation",
+      "path": "Navigation/Notes/Documentation.md"
+    },
+    {
+      "basename": "2acb31d748beb9ba877c54cc2a635b81147f4e0a99859275d8b8d61ab41732d8",
+      "path": "Inputs/koi/orn_koi-net.edge/2acb31d748beb9ba877c54cc2a635b81147f4e0a99859275d8b8d61ab41732d8.md"
+    },
+    {
+      "basename": "Stablecoins",
+      "path": "Notes/Stablecoins.md"
+    },
+    {
+      "basename": "Comments in Sources",
+      "path": "Navigation/Inputs/Comments in Sources.md"
     },
     {
       "basename": "Reference Notes",
@@ -65,112 +193,12 @@
       "path": "Navigation/Inputs/Source Inputs.md"
     },
     {
-      "basename": "🔭 Telescopes",
-      "path": "Navigation/KOI/🔭 Telescopes.md"
-    },
-    {
-      "basename": "KOI Stream ⛲",
-      "path": "Navigation/KOI/KOI Stream ⛲.md"
-    },
-    {
-      "basename": "⌥ ⌘ ⇧ K - KOI Stream",
-      "path": "Navigation/Documentation/⌥ ⌘ ⇧ K - KOI Stream.md"
-    },
-    {
-      "basename": "value",
-      "path": "Notes/value.md"
-    },
-    {
-      "basename": "2602080702_Andrejevic,_Mark_Examining_digital_twins_at_scales_from_t",
-      "path": "Synthesis/Quotes/ Sources/2602080702_Andrejevic,_Mark_Examining_digital_twins_at_scales_from_t.md"
-    },
-    {
-      "basename": "Quotes - All",
-      "path": "Navigation/Inputs/Quotes - All.md"
-    },
-    {
-      "basename": "⌘ ⇧ R - Referencing",
-      "path": "Navigation/Documentation/⌘ ⇧ R - Referencing.md"
-    },
-    {
-      "basename": "⌥ ⌘ ⇧ R - Replace Templates in active file",
-      "path": "Navigation/Documentation/⌥ ⌘ ⇧ R - Replace Templates in active file.md"
-    },
-    {
-      "basename": "Zotero Template",
-      "path": "_system/Templates/_Plugin Templates/Zotero Template.md"
-    },
-    {
-      "basename": "⌃ ⌘ Z - Zotero Import",
-      "path": "Navigation/Documentation/⌃ ⌘ Z - Zotero Import.md"
-    },
-    {
-      "basename": "⌘ ⇧ O - Open Notes",
-      "path": "Navigation/Documentation/⌘ ⇧ O - Open Notes.md"
-    },
-    {
-      "basename": "⌘ ⇧ P - Production",
-      "path": "Navigation/Documentation/⌘ ⇧ P - Production.md"
-    },
-    {
-      "basename": "All Hotkeys",
-      "path": "Navigation/Documentation/All Hotkeys.md"
-    },
-    {
-      "basename": "Documentation",
-      "path": "Navigation/Notes/Documentation.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "1. Reference Note",
-      "path": "_system/Templates/+ Referencing/1. Reference Note.md"
-    },
-    {
-      "basename": "⌘ P - Open Command Palette",
-      "path": "Navigation/Documentation/⌘ P - Open Command Palette.md"
-    },
-    {
-      "basename": "⌥ ⌘ Q - Close all Tabs",
-      "path": "Navigation/Documentation/⌥ ⌘ Q - Close all Tabs.md"
-    },
-    {
-      "basename": "⌥ 1 2 3 - Citing your Notes",
-      "path": "Navigation/Documentation/⌥ 1 2 3 - Citing your Notes.md"
-    },
-    {
-      "basename": "Buttons",
-      "path": "Navigation/Documentation/Buttons.md"
+      "basename": "Readwise Syncs",
+      "path": "Inputs/Readwise/Readwise Syncs.md"
     },
     {
       "basename": "Readwise Template",
       "path": "_system/Templates/_Plugin Templates/Readwise Template.md"
-    },
-    {
-      "basename": "Reference Note shortcut",
-      "path": "_system/Templates/Reference Note shortcut.md"
-    },
-    {
-      "basename": "createReferenceNote.js",
-      "path": "_system/Templates/JS_Scripts/JS-TEMP/createReferenceNote.js.md"
-    },
-    {
-      "basename": "1. My Notes",
-      "path": "Navigation/Notes/1. My Notes.md"
-    },
-    {
-      "basename": "4. Archive",
-      "path": "Navigation/Notes/4. Archive.md"
-    },
-    {
-      "basename": "3. Daily Notes",
-      "path": "Navigation/Notes/3. Daily Notes.md"
-    },
-    {
-      "basename": "2. Reminders",
-      "path": "Navigation/Notes/2. Reminders.md"
     }
   ],
   "omittedPaths": [],

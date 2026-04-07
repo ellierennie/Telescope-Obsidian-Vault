@@ -1,0 +1,45 @@
+.smart-file-nav-showall {
+  display: none;
+}
+
+.smart-file-nav-settings .setting-item .setting-item-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------------ */
+/*                       rule‑block visual wrapper                    */
+/* ------------------------------------------------------------------ */
+
+.smart-rule-block {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: var(--background-secondary);
+}
+
+/* tags showing selected folders */
+.folder-tags-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.folder-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--background-modifier-hover);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.8em;
+}
+
+.folder-tag-remove {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 0.8em;
+}

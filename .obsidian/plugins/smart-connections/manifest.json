@@ -1,7 +1,7 @@
 {
   "id": "smart-connections",
   "name": "Smart Connections Pro",
-  "version": "4.2.7",
+  "version": "4.4.0",
   "minAppVersion": "1.1.0",
   "description": "More opportunities for connections. Graph view for visualizing. Inline and footer views (great for mobile!). Configurable algorithms and additional embedding model providers.",
   "author": "🌴 Brian",

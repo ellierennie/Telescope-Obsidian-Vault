@@ -1,0 +1,10 @@
+{
+  "id": "smart-chat",
+  "name": "Smart Chat Pro",
+  "version": "1.4.0",
+  "minAppVersion": "1.1.0",
+  "description": "Advanced tools for context engineering. Utilize Bases, images, and external sources (great for coders!) in your contexts.",
+  "author": "🌴 Brian",
+  "authorUrl": "https://smartconnections.app",
+  "isDesktopOnly": false
+}

@@ -249,7 +249,7 @@
   "devMode": false,
   "templateFolderPath": "_system/Templates",
   "announceUpdates": "all",
-  "version": "2.10.0",
+  "version": "2.12.0",
   "globalVariables": {},
   "onePageInputEnabled": false,
   "disableOnlineFeatures": false,

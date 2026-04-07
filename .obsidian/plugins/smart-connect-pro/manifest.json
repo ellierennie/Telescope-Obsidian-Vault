@@ -1,0 +1,10 @@
+{
+  "id": "smart-connect-pro",
+  "name": "Smart Connect Pro",
+  "version": "1.0.2",
+  "minAppVersion": "1.8.0",
+  "description": "Securely connects your Obsidian vault to Smart Connect Pro so the official GPT can run authenticated /obsidian-cli commands.",
+  "author": "🌴 Brian",
+  "authorUrl": "https://smartconnections.app",
+  "isDesktopOnly": true
+}

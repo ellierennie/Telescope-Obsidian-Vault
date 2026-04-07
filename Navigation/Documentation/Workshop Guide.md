@@ -179,11 +179,17 @@ In Obsidian: **Settings → Community plugins → Readwise Official**
 
 2. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
    - Go to https://readwise.io/export/obsidian/preferences
+   - If you would like to include the full text of Readwise articles - not just highlights - then toggle "Export all Reader Documents" to ON. If you do not toggle this, then you will only receive what you have highlighted in your note, and the Full Document section will not be visible. In this case you can skip the instructions for the Full Document field (below). If you choose Full Document then you will create two notes - one with highlights only, which contains a link to a second note with the full text. 
    - Configure each section as follows:
 
 **File Name:**
 ```
 {{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_{{title|replace('#', '')|replace('@', '')}}
+```
+
+**Full Document Text file name**
+```
+{{author}}, {{title}} FULL DOC
 ```
 
 **Page Title:** Leave blank
@@ -769,8 +775,13 @@ brew install ollama
 brew services start ollama
 
 # Download a model
-ollama pull llama3.2:3b
+ollama pull gemma4
 ```
+
+**Model recommendations:**
+- **For 16GB+ RAM:** `gemma4` - Latest Google model, excellent quality (recommended)
+- **For 8GB RAM:** `llama3.2:3b` - Smaller, faster option
+- **Alternative:** `qwen2.5:7b` - Good for analysis (needs 16GB RAM)
 
 **2. Install an Obsidian plugin:**
 
@@ -780,7 +791,7 @@ Choose one of these plugins to use Ollama with your vault:
 - Settings → Community Plugins → Smart Connections
 - Settings → Smart Connections → Chat Model
 - Provider: Ollama
-- Model: `llama3.2:3b`
+- Model: `gemma4` (or `llama3.2:3b` for 8GB systems)
 - Base URL: `http://localhost:11434`
 
 **Obsidian Copilot**
@@ -788,7 +799,7 @@ Choose one of these plugins to use Ollama with your vault:
 - Install and Enable
 - Settings → Copilot → API Provider
 - Select Ollama or OpenAI-compatible
-- Model: `llama3.2:3b`
+- Model: `gemma4` (or `llama3.2:3b` for 8GB systems)
 - Base URL: `http://localhost:11434`
 
 **3. Start querying:**
@@ -838,6 +849,50 @@ Once configured, use the plugin's chat interface to ask questions about your vau
 **For more help:**
 - Ollama documentation: https://ollama.com/
 - Plugin-specific settings in Obsidian
+
+---
+
+#### Smart Connections and .gitignore (Important!)
+
+**If Smart Connections can't access your Notes or Inputs folders:**
+
+Smart Connections reads `.gitignore` and automatically excludes those folders. Since Notes/, Inputs/, Synthesis/, and People/ are gitignored for privacy, Smart Connections won't index them by default.
+
+**Fix this by adding a setting to Smart Connections config:**
+
+1. **Edit the Smart Connections config file:**
+
+```bash
+cd /path/to/your/vault
+
+# Make a backup first
+cp .smart-env/smart_env.json .smart-env/smart_env.json.backup
+
+# Edit the file
+nano .smart-env/smart_env.json
+```
+
+2. **Add this at the top of the JSON file:**
+
+```json
+{
+  "skip_excluding_gitignore": true,
+  ...existing settings...
+}
+```
+
+Make sure to add a comma after `true` if there are other settings below it.
+
+3. **Save** (Ctrl+X, Y, Enter)
+
+4. **Rebuild the index:**
+   - Settings → Smart Connections → Clear sources data
+   - Click Rebuild
+   - Wait for it to complete
+
+**Now Smart Connections will index your Notes, Inputs, and other folders** even though they're gitignored.
+
+**Important:** This setting is stored in `.smart-env/` which doesn't sync between devices, so you need to add it on each computer you use the vault on.
 
 ---
 

@@ -97,36 +97,42 @@ Then open the folder in Obsidian and trust the vault to enable plugins.
    - Select "Send to Obsidian"
    - A note should appear in `Inputs/Zotero/`
 
+Note: If Zotero Integration breaks, try using earlier version of Zotero and Better BibTex (stop automatic updates) until the plugin catches up. 
+
 ---
 
-### Readwise Integration
+### Configure Readwise Integration
 
 **Prerequisites:** Readwise account with highlights
 
 **Setup:**
+In Obsidian: **Settings → Community plugins → Readwise Official**
 
-1. **Get your API token:**
-   - Go to https://readwise.io/access_token
-   - Copy your token
+**Important about tags:**
+- Tags must be added in the **"Document Tags"** field in Readwise Reader (not as hashtags)
+- Type tags **without** the `#` symbol (e.g., `AI-labour`, not `#AI-labour`)
+- Use hyphens for multi-word tags (e.g., `contribution-systems`)
+- Hashtags in highlights or notes stay as text content - only Document Tags sync to the `tags:` field
 
-2. **In Obsidian:** Settings → Community plugins → Readwise Official
-   - **API Token:** Paste your token
-   - **Customize base folder:** `Inputs/Readwise`
-   - **Sync on startup:** Toggle ON
+1. Setting page
+- Customise base folder: Inputs/Readwise
+- **Sync on startup:** Toggle ON
+- Click "Sync now"
 
-3. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
+2. **Configure Readwise export settings** (IMPORTANT - this customizes how notes are formatted):
    - Go to https://readwise.io/export/obsidian/preferences
    - If you would like to include the full text of Readwise articles - not just highlights - then toggle "Export all Reader Documents" to ON. If you do not toggle this, then you will only receive what you have highlighted in your note, and the Full Document section will not be visible. In this case you can skip the instructions for the Full Document field (below). If you choose Full Document then you will create two notes - one with highlights only, which contains a link to a second note with the full text. 
+
    - Configure each section as follows:
 
 **File Name:**
 ```
-{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_{{title|replace('#', '')|replace('@', '')}}
+{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_"{{title|replace('#', '')|replace('@', '')|replace('"', '')}}"
 ```
 
 **Full Document Text file name**
 ```
-{{author}}, {{title}} FULL DOC
+{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}_"{{title|replace('#', '')|replace('@', '')|replace('"', '')}}" FULL_DOC
 ```
 
 **Page Title:** Leave blank
@@ -171,7 +177,7 @@ dv.view("mentions", {
 class: Sources
 category: Readwise
 author: <% await tp.user.processAuthorLinks(tp, "{{author|replace('#', '')|replace('@', '')|replace(' on Twitter', '')}}") %>
-sourceTitle: {{title|replace('#', '')|replace('@', '')}}
+sourceTitle: "{{title|replace('#', '')|replace('@', '')|replace('"', '')}}"
 type: input
 itemType:  {{category}}
 source: {{source}}
@@ -182,7 +188,7 @@ readwiseLink:[Readwise](https://readwise.io/bookreview/{{book_id}})
 highlights_url: {{ highlights_url }}{% endif %}{% if num_highlights %}
 num_highlights: {{ num_highlights }}{% endif %}
 flag: null
-tags: {% for tag in document_tags %}[[{{tag}}]] {% endfor %} 
+tags: [{% for tag in document_tags %}{{tag}}{% if not loop.last %}, {% endif %}{% endfor %}]
 note:
 ```
 
@@ -194,7 +200,7 @@ note:
 {% endfor %}
 ```
 
-4. **Save settings** in Readwise
+4. Settings will save in Readwise.
 
 5. **Back in Obsidian:**
    - Settings → Readwise Official → Click "Sync now"
